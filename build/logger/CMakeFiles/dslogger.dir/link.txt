@@ -1,0 +1,3 @@
+D:\ProgramFiles\cmake\bin\cmake.exe -E rm -f CMakeFiles\dslogger.dir/objects.a
+D:\ProgramFiles\mingw\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\ar.exe qc CMakeFiles\dslogger.dir/objects.a @CMakeFiles\dslogger.dir\objects1.rsp
+D:\ProgramFiles\mingw\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe -shared -o lib\libdslogger.dll -Wl,--out-implib,lib\libdslogger.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\dslogger.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\dslogger.dir\linklibs.rsp

@@ -1,0 +1,2 @@
+E:/Coding/C++/build/logger/../../lib/libdslogger.dll.a
+E:/Coding/C++/build/logger/../../bin/libdslogger.dll

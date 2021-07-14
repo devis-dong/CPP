@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "initializer_list": "cpp",
+        "iostream": "cpp",
+        "string_view": "cpp",
+        "iosfwd": "cpp",
+        "limits": "cpp",
+        "streambuf": "cpp",
+        "*.tcc": "cpp",
+        "exception": "cpp",
+        "unordered_map": "cpp",
+        "fstream": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "string": "cpp"
+    }
+}
