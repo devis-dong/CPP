@@ -6,30 +6,27 @@ project(prj VERSION 0.1.0)
 set(src dslogger.cpp)
 # name of output lib
 set(lib dslogger)
-# where to store the lib
-set(lib_path  ${PROJECT_BINARY_DIR}/lib)
-# where to install the lib
-set(install_path  "../../")
-# .h files to install
-set(headfiles dslogger.h)
-
 
 # add included path for building
-include_directories("../../inc" "../../src")
+include_directories(${PROJECT_BINARY_DIR}/../../inc ${PROJECT_BINARY_DIR}/../../src)
+# add linked path for building
+link_directories(${PROJECT_BINARY_DIR}/../../bin)
 # generate the dll
 add_library(${lib} SHARED ${src})
-# set path to store the lib
-set(LIBRARY_OUTPUT_PATH  ${lib_path})
-# set path to install the lib
-set(CMAKE_INSTALL_PREFIX ${install_path})
+# link the dependent lib
+target_link_libraries(${lib} "libdswatch.dll")
+# where to store the lib
+set(LIBRARY_OUTPUT_PATH  ${PROJECT_BINARY_DIR}/lib)
+# where to install the lib
+set(CMAKE_INSTALL_PREFIX ${PROJECT_BINARY_DIR}/../../)
 # install lib
 install(
     TARGETS  ${lib}
     # LIBRARY dynamic link library
-    LIBRARY
+    LIBRARY 
 )
 
-# path to install .h files
-# set(inc_path ${install_path}/inc)
+# .h files to install
+# set(headfiles dslogger.h)
 # install .h files
-# install(FILES ${headfiles} DESTINATION ${inc_path})
+# install(FILES ${headfiles} DESTINATION ${PROJECT_BINARY_DIR}/../../inc)

@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 15:30:20
- * @LastEditTime: 2021-07-15 14:03:27
+ * @LastEditTime: 2021-07-15 20:53:10
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\Logger\dslogger.cpp
@@ -10,7 +10,7 @@
 #include <stdarg.h>
 #include "common/dsdefine.h"
 #include "logger/dslogger.h"
-#include "time/dstime.h"
+#include "watch/dswatch.h"
 
 using namespace std;
 
@@ -27,8 +27,8 @@ namespace ds
         _level = level;
         _path = path;
         _file_handle = nullptr;
-        if(_path.empty() || "" == _path) _path = string("logs/") + get_date() +".log";
-        string msg = get_format_date() + " ****WELCOME**** Target: " + target2str(_target) + " Level: " + level2str(_level) + "Path: " + _path + "\n";
+        if(_path.empty() || "" == _path) _path = string("logs/") + Watch::get_datetime(false) +".log";
+        string msg = Watch::get_datetime() + " ****WELCOME**** Target: " + target2str(_target) + " Level: " + level2str(_level) + "Path: " + _path + "\n";
         if(target & target_file)
         {
             _file_handle = fopen(_path.c_str(), "a");
@@ -110,7 +110,7 @@ namespace ds
 
     void Logger::log(I const LogLevel& level, I const string& file, I const int& line, I const string& text)
     {
-        string msg = get_format_date() + " " + level2str(level) + " " + file + "(" + to_string(line) + ")" + ": " + text + "\n";
+        string msg = Watch::get_datetime(false) + " " + level2str(level) + " " + file + "(" + to_string(line) + ")" + ": " + text + "\n";
         if((_level & level) && (_target & target_terminal))
         {
             printf("%s", msg.c_str());

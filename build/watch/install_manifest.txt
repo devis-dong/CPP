@@ -1,0 +1,2 @@
+E:/Coding/C++/build/watch/../../lib/libdswatch.dll.a
+E:/Coding/C++/build/watch/../../bin/libdswatch.dll
