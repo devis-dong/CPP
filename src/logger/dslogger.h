@@ -1,10 +1,10 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 15:30:14
- * @LastEditTime: 2021-07-14 20:16:27
+ * @LastEditTime: 2021-07-15 17:41:40
  * @LastEditors: devis dong
  * @Description: 
- * @FilePath: \C++\src\Logger\dslogger.h
+ * @FilePath: \C++\src\logger\dslogger.h
  */
 
 #ifndef DSLOGGER_H
@@ -18,6 +18,12 @@
 
 using namespace std;
 
+#define logger(target, level, path) Logger logger(target, level, path)
+#define logdebug(...)      logger.log_debug(__FILE__, __LINE__, __VA_ARGS__)
+#define loginfo(...)       logger.log_info(__FILE__, __LINE__, __VA_ARGS__)
+#define logwarnning(...)   logger.log_warning(__FILE__, __LINE__, __VA_ARGS__)
+#define logerror(...)      logger.log_error(__FILE__, __LINE__, __VA_ARGS__)
+
 namespace ds
 {
     class Logger
@@ -27,14 +33,14 @@ namespace ds
             enum LogTarget{target_file = 0b00000001, target_terminal = 0b00000010, target_all = 0b11111111};
             Logger(I const int& target=target_terminal, I const int& level=level_debug, I const string& path="");
             ~Logger();
-            void log_debug(I const string& text, I const string& file=__FILE__, I const int& line=__LINE__);
-            void log_info(I const string& text, I const string& file=__FILE__, I const int& line=__LINE__);
-            void log_warning(I const string& text, I const string& file=__FILE__, I const int& line=__LINE__);
-            void log_error(I const string& text, I const string& file=__FILE__, I const int& line=__LINE__);
+            void log_debug(I const string& file, I const int& line, I const char* fmt, ...);
+            void log_info(I const string& file, I const int& line, I const char* fmt, ...);
+            void log_warning(I const string& file, I const int& line, I const char* fmt, ...);
+            void log_error(I const string& file, I const int& line, I const char* fmt, ...);
         private:
             void init(I const int& target=target_terminal, I const int& level=level_debug, I const string& path="");
             void deinit();
-            void log(I const string& text, I const LogLevel level, I const string& file=__FILE__, I const int& line=__LINE__);            // 输出行为
+            void log(I const LogLevel& level, I const string& file, I const int& line, I const string& text);            // 输出行为
             string target2str(I const int& level);
             string level2str(I const int& level);
         private:

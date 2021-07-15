@@ -1,5 +1,14 @@
 CMakeFiles/dslogger.dir/dslogger.cpp.obj: \
  E:\Coding\C++\src\logger\dslogger.cpp \
+ D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/stdarg.h \
+ D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/stdarg.h \
+ D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/vadefs.h \
+ D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw.h \
+ D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
+ D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
+ D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
+ D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  E:/Coding/C++/src/common/dsdefine.h E:/Coding/C++/src/logger/dslogger.h \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/string \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -29,12 +38,6 @@ CMakeFiles/dslogger.dir/dslogger.cpp.obj: \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cwchar \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/wchar.h \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
- D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw.h \
- D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
- D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
- D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/vadefs.h \
- D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
- D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_print_push.h \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \

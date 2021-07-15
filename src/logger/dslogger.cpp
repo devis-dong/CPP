@@ -1,16 +1,23 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 15:30:20
- * @LastEditTime: 2021-07-14 20:24:20
+ * @LastEditTime: 2021-07-15 14:03:27
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\Logger\dslogger.cpp
  */
 
+#include <stdarg.h>
 #include "common/dsdefine.h"
 #include "logger/dslogger.h"
 #include "time/dstime.h"
 
+using namespace std;
+
+#define format_str(text)    { va_list args;\
+        va_start(args, fmt);\
+        vsprintf(text, fmt, args);\
+        va_end(args); }
 
 namespace ds
 {
@@ -51,20 +58,6 @@ namespace ds
     Logger::~Logger()
     {
         deinit();
-    }
-
-    void Logger::log(I const string& text, I const LogLevel level, I const string& file, I const int& line)
-    {
-        string msg = get_format_date() + " " + level2str(level) + " " + file + "(" + to_string(line) + ")" + ": " + text + "\n";
-        if((_level & level) && (_target & target_terminal))
-        {
-            printf("%s", msg.c_str());
-        }
-        if(_target & target_file)
-        {
-            fwrite(msg.c_str(), msg.size(), 1, (FILE*)_file_handle);
-            fflush((FILE*)_file_handle);
-        }
     }
 
     string Logger::target2str(I const int& level)
@@ -115,23 +108,41 @@ namespace ds
         return level_str;
     }
 
-    void Logger::log_debug(I const string& text, I const string& file, I const int& line)
+    void Logger::log(I const LogLevel& level, I const string& file, I const int& line, I const string& text)
     {
-        this->log(text, level_debug, file, line);
+        string msg = get_format_date() + " " + level2str(level) + " " + file + "(" + to_string(line) + ")" + ": " + text + "\n";
+        if((_level & level) && (_target & target_terminal))
+        {
+            printf("%s", msg.c_str());
+        }
+        if(_target & target_file)
+        {
+            fwrite(msg.c_str(), msg.size(), 1, (FILE*)_file_handle);
+            fflush((FILE*)_file_handle);
+        }
     }
 
-    void Logger::log_info(I const string& text, I const string& file, I const int& line)
+    void Logger::log_debug(I const string& file, I const int& line, I const char* fmt, ...)
     {
-        this->log(text, level_info, file, line);
+        char text[256]; format_str(text);
+        this->log(level_debug, file, line, text);
     }
 
-    void Logger::log_warning(I const string& text, I const string& file, I const int& line)
+    void Logger::log_info(I const string& file, I const int& line, I const char* fmt, ...)
     {
-        this->log(text, level_warning, file, line);
+        char text[256]; format_str(text);
+        this->log(level_debug, file, line, text);
+    }
+
+    void Logger::log_warning(I const string& file, I const int& line, I const char* fmt, ...)
+    {
+        char text[256]; format_str(text);
+        this->log(level_debug, file, line, text);
     }
     
-    void Logger::log_error(I const string& text, I const string& file, I const int& line)
+    void Logger::log_error(I const string& file, I const int& line, I const char* fmt, ...)
     {
-        this->log(text, level_error, file, line);
+        char text[256]; format_str(text);
+        this->log(level_debug, file, line, text);
     }
 }

@@ -1,10 +1,10 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 12:53:46
- * @LastEditTime: 2021-07-14 18:37:29
+ * @LastEditTime: 2021-07-14 20:37:02
  * @LastEditors: devis dong
  * @Description: 
- * @FilePath: \C++\src\Mat\dsmat.h
+ * @FilePath: \CPP\src\mat\dsmat.h
  */
 
 #ifndef DSMAT_H
@@ -24,7 +24,6 @@ namespace ds
     {
         public:
             Mat(I initializer_list<int> shape);
-            
             template <typename R>
             Mat(I initializer_list<int> shape, I const R* const pdata);
             template <typename R>

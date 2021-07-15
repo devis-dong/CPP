@@ -1,28 +1,25 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 18:43:18
- * @LastEditTime: 2021-07-14 18:38:38
+ * @LastEditTime: 2021-07-15 18:14:51
  * @LastEditors: devis dong
  * @Description: 
- * @FilePath: \C++\test\dslogger_test.cpp
+ * @FilePath: \C++\test\logger\dslogger_test.cpp
  */
 
 #include "logger/dslogger.h"
 using namespace ds;
 
-Logger logger(LOGTARGET, LOGLEVEL);
-#define log_debug(text) logger.log_debug(text, __FILE__, __LINE__)
-#define log_info(text) logger.log_info(text, __FILE__, __LINE__)
-#define log_warnning(text) logger.log_warning(text, __FILE__, __LINE__)
-#define log_error(text) logger.log_error(text, __FILE__, __LINE__)
+
+logger(Logger::target_all, Logger::level_all, "");
 
 int main()
 {
     printf("running...\n");
-    log_debug("What happend?");
-    log_info("This is good.");
-    log_warnning("Warning.");
-    log_error("IO Error!");
+    logdebug("what happened? %d", 0);
+    loginfo("This is good. %d", 1);
+    logwarnning("Warning. %d", 2);
+    logerror("IO Error! %d", 3);
     printf("...done.\n");
     system("pause");
     return 0;
