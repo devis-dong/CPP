@@ -1,0 +1,1 @@
+  -LE:/Coding/C++/build/opencv/install/bin  -lopencv_highgui3413 -lopencv_imgcodecs3413 -lopencv_imgproc3413 -lopencv_core3413 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
