@@ -1,3 +1,3 @@
-E:/Coding/C++/build/test/dsimage/CMakeFiles/test_dsmat.dir
+E:/Coding/C++/build/test/dsimage/CMakeFiles/test_dsimage.dir
 E:/Coding/C++/build/test/dsimage/CMakeFiles/edit_cache.dir
 E:/Coding/C++/build/test/dsimage/CMakeFiles/rebuild_cache.dir

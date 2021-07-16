@@ -116,41 +116,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_dsmat
+# Target rules for targets named test_dsimage
 
 # Build rule for target.
-test_dsmat: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_dsmat
-.PHONY : test_dsmat
+test_dsimage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 test_dsimage
+.PHONY : test_dsimage
 
 # fast build rule for target.
-test_dsmat/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_dsmat.dir\build.make CMakeFiles/test_dsmat.dir/build
-.PHONY : test_dsmat/fast
+test_dsimage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_dsimage.dir\build.make CMakeFiles/test_dsimage.dir/build
+.PHONY : test_dsimage/fast
 
-test_dsmat.obj: test_dsmat.cpp.obj
-.PHONY : test_dsmat.obj
+test_dsimage.obj: test_dsimage.cpp.obj
+.PHONY : test_dsimage.obj
 
 # target to build an object file
-test_dsmat.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_dsmat.dir\build.make CMakeFiles/test_dsmat.dir/test_dsmat.cpp.obj
-.PHONY : test_dsmat.cpp.obj
+test_dsimage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_dsimage.dir\build.make CMakeFiles/test_dsimage.dir/test_dsimage.cpp.obj
+.PHONY : test_dsimage.cpp.obj
 
-test_dsmat.i: test_dsmat.cpp.i
-.PHONY : test_dsmat.i
+test_dsimage.i: test_dsimage.cpp.i
+.PHONY : test_dsimage.i
 
 # target to preprocess a source file
-test_dsmat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_dsmat.dir\build.make CMakeFiles/test_dsmat.dir/test_dsmat.cpp.i
-.PHONY : test_dsmat.cpp.i
+test_dsimage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_dsimage.dir\build.make CMakeFiles/test_dsimage.dir/test_dsimage.cpp.i
+.PHONY : test_dsimage.cpp.i
 
-test_dsmat.s: test_dsmat.cpp.s
-.PHONY : test_dsmat.s
+test_dsimage.s: test_dsimage.cpp.s
+.PHONY : test_dsimage.s
 
 # target to generate assembly for a file
-test_dsmat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_dsmat.dir\build.make CMakeFiles/test_dsmat.dir/test_dsmat.cpp.s
-.PHONY : test_dsmat.cpp.s
+test_dsimage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test_dsimage.dir\build.make CMakeFiles/test_dsimage.dir/test_dsimage.cpp.s
+.PHONY : test_dsimage.cpp.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... test_dsmat
-	@echo ... test_dsmat.obj
-	@echo ... test_dsmat.i
-	@echo ... test_dsmat.s
+	@echo ... test_dsimage
+	@echo ... test_dsimage.obj
+	@echo ... test_dsimage.i
+	@echo ... test_dsimage.s
 .PHONY : help
 
 

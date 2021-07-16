@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-16 14:32:00
- * @LastEditTime: 2021-07-16 20:08:49
+ * @LastEditTime: 2021-07-16 21:08:49
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\test\dsimage\test_dsimage.cpp
@@ -15,7 +15,7 @@ using namespace ds;
 int main()
 {
     printf("running...");
-    
+
     int h = 10, w = 10, c = 3;
     Image<int> img(h, w, c);
     for(int i = 0; i < img.get_elements_num(); img[i++] = i);
