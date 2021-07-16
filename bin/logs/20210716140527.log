@@ -1,5 +1,0 @@
-2021-07-16 14:05:27 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: logs/20210716140527.log
-20210716140527 [DEBUG]         E:\Coding\C++\test\logger\test_dslogger.cpp(21): what happened? 0
-20210716140527 [DEBUG]         E:\Coding\C++\test\logger\test_dslogger.cpp(22): This is good. 1
-20210716140527 [DEBUG]         E:\Coding\C++\test\logger\test_dslogger.cpp(23): Warning. 2
-20210716140527 [DEBUG]         E:\Coding\C++\test\logger\test_dslogger.cpp(24): IO Error! 3
