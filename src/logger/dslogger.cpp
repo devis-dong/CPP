@@ -1,16 +1,15 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 15:30:20
- * @LastEditTime: 2021-07-15 20:53:10
+ * @LastEditTime: 2021-07-16 15:58:36
  * @LastEditors: devis dong
  * @Description: 
- * @FilePath: \C++\src\Logger\dslogger.cpp
+ * @FilePath: \C++\src\logger\dslogger.cpp
  */
 
+#include <time.h>
 #include <stdarg.h>
-#include "common/dsdefine.h"
-#include "logger/dslogger.h"
-#include "watch/dswatch.h"
+#include "dslogger.h"
 
 using namespace std;
 
@@ -27,8 +26,8 @@ namespace ds
         _level = level;
         _path = path;
         _file_handle = nullptr;
-        if(_path.empty() || "" == _path) _path = string("logs/") + Watch::get_datetime(false) +".log";
-        string msg = Watch::get_datetime() + " ****WELCOME**** Target: " + target2str(_target) + " Level: " + level2str(_level) + "Path: " + _path + "\n";
+        if(_path.empty() || "" == _path) _path = get_datetime(false) +".log";
+        string msg = get_datetime() + " ****WELCOME**** Target: " + target2str(_target) + " Level: " + level2str(_level) + "Path: " + _path + "\n";
         if(target & target_file)
         {
             _file_handle = fopen(_path.c_str(), "a");
@@ -110,7 +109,7 @@ namespace ds
 
     void Logger::log(I const LogLevel& level, I const string& file, I const int& line, I const string& text)
     {
-        string msg = Watch::get_datetime(false) + " " + level2str(level) + " " + file + "(" + to_string(line) + ")" + ": " + text + "\n";
+        string msg = get_datetime(false) + " " + level2str(level) + " " + file + "(" + to_string(line) + ")" + ": " + text + "\n";
         if((_level & level) && (_target & target_terminal))
         {
             printf("%s", msg.c_str());
@@ -144,5 +143,20 @@ namespace ds
     {
         char text[256]; format_str(text);
         this->log(level_debug, file, line, text);
+    }
+
+    string Logger::get_datetime(I const bool format)
+    {
+        time_t t = time(0); 
+        char tmp[32]={0};
+        if(format)
+        {
+            strftime(tmp, sizeof(tmp), "%Y-%m-%d %H:%M:%S", localtime(&t));
+        }
+        else
+        {
+            strftime(tmp, sizeof(tmp), "%Y%m%d%H%M%S", localtime(&t));
+        }
+        return tmp;
     }
 }

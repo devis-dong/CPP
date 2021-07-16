@@ -1,0 +1,6 @@
+E:/Coding/C++/build/mat/install/lib/libdsmat.dll.a
+E:/Coding/C++/build/mat/install/bin/libdsmat.dll
+E:/Coding/C++/build/mat/install/inc/dsmat.h
+E:/Coding/C++/build/mat/install/inc/dsdefine.h
+E:/Coding/C++/build/mat/install/bin/libdslogger.dll
+E:/Coding/C++/build/mat/install/lib/libdslogger.dll.a

@@ -1,0 +1,5 @@
+2021-07-16 17:19:03 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: 20210716171903.log
+20210716171903 [DEBUG]         E:\Coding\C++\src\mat\dsmat.cpp(29): enter init.
+20210716171903 [DEBUG]         E:\Coding\C++\src\mat\dsmat.cpp(35): leave init.
+20210716171910 [DEBUG]         E:\Coding\C++\src\mat\dsmat.cpp(41): enter deinit.
+20210716171910 [DEBUG]         E:\Coding\C++\src\mat\dsmat.cpp(51): leave deinit.

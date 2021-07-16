@@ -1,17 +1,19 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 18:43:18
- * @LastEditTime: 2021-07-15 21:38:18
+ * @LastEditTime: 2021-07-16 15:52:35
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\test\logger\test_dslogger.cpp
  */
 
-#include "logger/dslogger.h"
+#include "dslogger.h"
 using namespace ds;
 
-
-logger(Logger::target_all, Logger::level_all, "");
+#ifndef logger_init
+#define logger_init
+    logger(Logger::target_all, Logger::level_all, "");
+#endif
 
 int main()
 {

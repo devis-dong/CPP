@@ -1,229 +1,190 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 12:55:05
- * @LastEditTime: 2021-07-14 18:37:44
+ * @LastEditTime: 2021-07-16 17:06:46
  * @LastEditors: devis dong
  * @Description: 
- * @FilePath: \C++\src\Mat\dsmat.cpp
+ * @FilePath: \C++\src\mat\dsmat.cpp
  */
 
-#include "common/dsdefine.h"
-#include "mat/dsmat.h"
+
+#include <stdio.h>
+#include <assert.h>
+#include <stdlib.h>
+#include "dsmat.h"
+#include "dslogger.h"
+
+using namespace std;
 
 namespace ds
 {
+    #ifndef logger_init
+    #define logger_init
+        logger(Logger::target_all, Logger::level_all, "");
+    #endif
+
+    template <typename T>
+    void Mat<T>::init()
+    {
+        logdebug("enter init.");
+        _pdata = nullptr;
+        _shape.clear();
+        _interval.clear();
+        _elements_num = 0;
+        _elements_size = 0;
+        logdebug("leave init.");
+    }
+
+    template <typename T>
+    void Mat<T>::deinit()
+    {
+        logdebug("enter deinit.");
+        _elements_size = 0;
+        _elements_num = 0;
+        _shape.clear();
+        _interval.clear();
+        if(nullptr != _pdata)
+        {
+            delete [] _pdata;
+            _pdata = nullptr;
+        }
+        logdebug("leave deinit.");
+    }
+
+    template<typename T>
+    Mat<T>::Mat()
+    {
+        init();
+    }
+
     template <typename T>
     Mat<T>::Mat(I initializer_list<int> shape)
     {
         assert (shape.size() > 0);
-        member_init();
-        m_shape = shape;
-        m_step.resize(m_shape.size());
-        int step = 1;
-        for(int i = m_shape.size()-1; i >= 0; step *= m_shape[i], --i) m_step[i] = step;
-        m_num_of_elements = step;
-        m_size_of_elements = m_num_of_elements * sizeof(T);
-        m_pdata = new T[m_num_of_elements];
-        assert (m_pdata != nullptr);
-        memset(m_pdata, 0, m_size_of_elements);
-    }
-
-    // template <typename T>
-    // template <typename R>
-    // Mat<T>::Mat(I initializer_list<int> shape, I const R data)
-    // {
-    //     assert (shape.size() > 0);
-    //     member_init();
-    //     m_shape = shape;
-    //     m_step.resize(m_shape.size());
-    //     int step = 1;
-    //     for(int i = m_shape.size()-1; i >= 0; step *= m_shape[i], --i) m_step[i] = step;
-    //     m_num_of_elements = step;
-    //     m_size_of_elements = m_num_of_elements * sizeof(T);
-    //     m_pdata = new T[m_num_of_elements]; // {data};
-    //     assert (m_pdata != nullptr);
-    //     for(int i = 0; i < m_num_of_elements; ++i) m_pdata[i] = (T)data;
-    // }
-
-    template <typename T>
-    template <typename R>
-    Mat<T>::Mat(I initializer_list<int> shape, I const R* const pdata)
-    {
-        assert (shape.size() > 0);
-        member_init();
-        m_shape = shape;
-        m_step.resize(m_shape.size());
-        int step = 1;
-        for(int i = m_shape.size()-1; i >= 0; step *= m_shape[i], --i) m_step[i] = step;
-        m_num_of_elements = step;
-        m_size_of_elements = m_num_of_elements * sizeof(T);
-        m_pdata = new T[m_num_of_elements];
-        assert (m_pdata != nullptr);
-        for(int i = 0; i < m_num_of_elements; ++i) m_pdata[i] = (T)pdata[i];
+        init();
+        _shape = shape;
+        _interval.resize(_shape.size());
+        _elements_num = 1;
+        for(int i = _shape.size()-1; i >= 0; _interval[i] = _elements_num, _elements_num *= _shape[i], --i);
+        _elements_size = _elements_num * sizeof(T);
+        _pdata = new T[_elements_num];
+        assert (_pdata != nullptr);
     }
 
     template <typename T>
     template <typename R>
-    Mat<T>::Mat(I Mat<R> &mat)
+    Mat<T>::Mat(I initializer_list<int> shape, I const R* pdata)
     {
-        member_init();
-        m_shape = mat.m_shape;
-        m_step = mat.m_step;
-        m_num_of_elements = mat.m_num_of_elements;
-        m_size_of_elements = m_num_of_elements * sizeof(T);
-        m_pdata = new T[m_num_of_elements];
-        assert (m_pdata != nullptr);
-        for(int i = 0; i < m_num_of_elements; ++i) m_pdata[i] = (T)mat.m_pdata[i];
+        assert (shape.size() > 0);
+        init();
+        _shape = shape;
+        _interval.resize(_shape.size());
+        _elements_num = 1;
+        for(int i = _shape.size()-1; i >= 0; _interval[i] = _elements_num, _elements_num *= _shape[i], --i);
+        _elements_size = _elements_num * sizeof(T);
+        _pdata = new T[_elements_num];
+        assert (_pdata != nullptr);
+        if(nullptr != pdata) for(int i = 0; i < _elements_num; ++i) _pdata[i] = (T)pdata[i];
     }
 
     template <typename T>
-    int Mat<T>::reset(I initializer_list<int> shape)
+    template <typename R>
+    Mat<T>::Mat(I const Mat<R> &obj)
     {
-        assert (shape.size() > 0);
-        member_free();
-        member_init();
-        m_shape = shape;
-        m_step.resize(m_shape.size());
-        int step = 1;
-        for(int i = m_shape.size()-1; i >= 0; step *= m_shape[i], --i) m_step[i] = step;
-        m_num_of_elements = step;
-        m_size_of_elements = m_num_of_elements * sizeof(T);
-        m_pdata = new T[m_num_of_elements];
-        assert (m_pdata != nullptr);
-        memset(m_pdata, 0, m_size_of_elements);
+        init();
+        _shape = obj._shape;
+        _interval = obj._interval;
+        _elements_num = obj._elements_num;
+        _elements_size = _elements_num * sizeof(T);
+        _pdata = new T[_elements_num];
+        assert (_pdata != nullptr);
+        for(int i = 0; i < _elements_num; ++i) _pdata[i] = (T)obj._pdata[i];
+    }
 
-        return 0;
+    template <typename T>
+    template <typename R>
+    T& Mat<T>::operator=(I const Mat<R>& obj)
+    {
+        if(this == &obj)
+        {
+            return *this;
+        }
+        deinit();
+        _shape = obj._shape;
+        _interval = obj._interval;
+        _elements_num = obj._elements_num;
+        _elements_size = _elements_num * sizeof(T);
+        _pdata = new T[_elements_num];
+        assert (_pdata != nullptr);
+        for(int i = 0; i < _elements_num; ++i) _pdata[i] = (T)obj._pdata[i];
     }
 
     template <typename T>
     Mat<T>::~Mat()
     {
-        member_free();
-    }
-
-    template <typename T>
-    void Mat<T>::member_init()
-    {
-        m_pdata = nullptr;
-        m_shape.clear();
-        m_num_of_elements = 0;
-        m_size_of_elements = 0;
-    }
-
-    template <typename T>
-    void Mat<T>::member_free()
-    {
-        m_size_of_elements = 0;
-        m_num_of_elements = 0;
-        m_shape.clear();
-        if(m_pdata) delete [] m_pdata;
+        deinit();
     }
 
     template <typename T>
     vector<int> Mat<T>::shape() const
     {
-        return m_shape;
+        return _shape;
     }
 
     template <typename T>
-    int Mat<T>::num_of_elements() const
+    int Mat<T>::get_elements_num() const
     {
-        return m_num_of_elements;
+        return _elements_num;
     }
 
     template <typename T>
-    int Mat<T>::size_of_elements() const
+    int Mat<T>::get_dims_num() const
     {
-        return m_size_of_elements;
+        return _shape.size();
     }
 
     template <typename T>
-    int Mat<T>::dims() const
+    T& Mat<T>::at(initializer_list<int> pos)
     {
-        return m_shape.size();
-    }
-
-    // template <typename T>
-    // T& Mat<T>::at(initializer_list<int> pos)
-    // {
-    //     assert (0 < pos.size() && pos.size() <= m_shape.size());
-    //     int idx = 0, i = 0;
-    //     for(initializer_list<int>::iterator it = pos.begin(); it != pos.end(); ++it, ++i)
-    //     {
-    //         assert ((*it) < m_shape[i]);
-    //         idx += ((*it) * m_step[i]);
-    //     }
-    //     return m_pdata[idx];
-    // }
-
-    template <typename T>
-    template <typename ...Args>
-    T& Mat<T>::at(Args&&... args)
-    {
-        initializer_list<int> pos = {(std::forward<Args>(args))...};
+        assert (0 < pos.size() && pos.size() <= _shape.size());
         int idx = 0, i = 0;
         for(initializer_list<int>::iterator it = pos.begin(); it != pos.end(); ++it, ++i)
         {
-            assert ((*it) < m_shape[i]);
-            idx += ((*it) * m_step[i]);
+            assert ((*it) < _shape[i]);
+            idx += ((*it) * _interval[i]);
         }
-        return m_pdata[idx];
-    }
-
-    // template <typename T>
-    // T* Mat<T>::ptr(initializer_list<int> pos)
-    // {
-    //     assert (0 < pos.size() && pos.size() <= m_shape.size());
-    //     int idx = 0, i = 0;
-    //     for(initializer_list<int>::iterator it = pos.begin(); it != pos.end(); ++it, ++i)
-    //     {
-    //         assert ((*it) < m_shape[i]);
-    //         idx += ((*it) * m_step[i]);
-    //     }
-    //     return m_pdata + idx;
-    // }
-
-    template <class T>
-    template <typename ...Args>
-    T* Mat<T>::ptr(Args&&... args)
-    {
-        initializer_list<int> pos = {(std::forward<Args>(args))...};
-        assert (0 < pos.size() && pos.size() <= m_shape.size());
-        int idx = 0, i = 0;
-        for(initializer_list<int>::iterator it = pos.begin(); it != pos.end(); ++it, ++i)
-        {
-            assert ((*it) < m_shape[i]);
-            idx += ((*it) * m_step[i]);
-        }
-        return m_pdata + idx;
+        return _pdata[idx];
     }
 
     template <typename T>
-    template <typename ...Args>
-    T& Mat<T>::operator()(Args&&... args)
+    T* Mat<T>::ptr(initializer_list<int> pos)
     {
-        initializer_list<int> pos = {(std::forward<Args>(args))...};
+        assert (0 < pos.size() && pos.size() <= _shape.size());
         int idx = 0, i = 0;
         for(initializer_list<int>::iterator it = pos.begin(); it != pos.end(); ++it, ++i)
         {
-            assert ((*it) < m_shape[i]);
-            idx += ((*it) * m_step[i]);
+            assert ((*it) < _shape[i]);
+            idx += ((*it) * _interval[i]);
         }
-        return m_pdata[idx];
+        return _pdata + idx;
     }
 
     template <typename T>
     T& Mat<T>::operator[](I const int i)
     {
-        return m_pdata[i];
+        return _pdata[i];
     }
 
-    template <typename T>
-    int Mat<T>::step(I const int i) const
-    {
-        assert (0 <= i && i < m_step.size());
-        return m_step[i];
-    }
+    template class Mat<char>;
+    template class Mat<int>;
+    template class Mat<long>;
+    template class Mat<long long>;
+    template class Mat<float>;
+    template class Mat<double>;
+    template class Mat<unsigned char>;
+    template class Mat<unsigned int>;
+    template class Mat<unsigned long>;
+    template class Mat<unsigned long long>;
 
 }
 

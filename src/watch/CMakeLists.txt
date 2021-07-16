@@ -8,19 +8,15 @@ set(src dswatch.cpp)
 set(lib dswatch)
 # .h files to install
 set(headfiles dswatch.h)
-# where to store the lib
-set(lib_path  ${PROJECT_BINARY_DIR}/lib)
-# where to install the lib
-set(install_path  ${PROJECT_BINARY_DIR}/../../)
 
 # add included path for building
-include_directories(${PROJECT_BINARY_DIR}/../../inc ${PROJECT_BINARY_DIR}/../../src)
+include_directories("E:/Coding/C++/src/common")
 # generate the dll
 add_library(${lib} SHARED ${src})
-# set path to store the lib
-set(LIBRARY_OUTPUT_PATH  ${lib_path})
-# set path to install the lib
-set(CMAKE_INSTALL_PREFIX ${install_path})
+# where to store the lib
+set(LIBRARY_OUTPUT_PATH  ${PROJECT_BINARY_DIR}/lib)
+# where to install the lib
+set(CMAKE_INSTALL_PREFIX ${PROJECT_BINARY_DIR}/install)
 # install lib
 install(
     TARGETS  ${lib}
@@ -28,7 +24,5 @@ install(
     LIBRARY
 )
 
-# path to install .h files
-# set(inc_path ${install_path}/inc)
 # install .h files
-# install(FILES ${headfiles} DESTINATION ${inc_path})
+install(FILES "../common/dsdefine.h" "dswatch.h" DESTINATION ${PROJECT_BINARY_DIR}/install/inc)

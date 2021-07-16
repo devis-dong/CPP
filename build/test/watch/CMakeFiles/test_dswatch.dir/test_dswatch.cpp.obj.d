@@ -135,4 +135,5 @@ CMakeFiles/test_dswatch.dir/test_dswatch.cpp.obj: \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_lockfree_defines.h \
  D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward/auto_ptr.h \
- E:/Coding/C++/src/watch/dswatch.h E:/Coding/C++/src/common/dsdefine.h
+ E:/Coding/C++/build/watch/install/inc/dswatch.h \
+ E:/Coding/C++/build/watch/install/inc/dsdefine.h

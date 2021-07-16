@@ -3,9 +3,9 @@ project(test_dslogger VERSION 1.0)
 set(src test_dslogger.cpp)
 set(exe test_dslogger)
 
-include_directories(${PROJECT_BINARY_DIR}/../../../src ${PROJECT_BINARY_DIR}../../../src)
-link_directories(${PROJECT_BINARY_DIR}/../../../bin)
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/../../../bin)
+include_directories("E:/Coding/C++/build/logger/install/inc")
+link_directories("E:/Coding/C++/build/logger/install/bin")
+set(EXECUTABLE_OUTPUT_PATH "E:/Coding/C++/build/logger/install/bin")
 
 add_executable(${exe} ${src})
 target_link_libraries(${exe} "libdslogger.dll")

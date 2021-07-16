@@ -1,2 +1,4 @@
-E:/Coding/C++/build/logger/../../lib/libdslogger.dll.a
-E:/Coding/C++/build/logger/../../bin/libdslogger.dll
+E:/Coding/C++/build/logger/install/lib/libdslogger.dll.a
+E:/Coding/C++/build/logger/install/bin/libdslogger.dll
+E:/Coding/C++/build/logger/install/inc/dslogger.h
+E:/Coding/C++/build/logger/install/inc/dsdefine.h

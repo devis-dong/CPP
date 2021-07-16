@@ -1,1 +1,1 @@
-  -LE:/Coding/C++/build/test/watch/../../../bin  -ldswatch -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+  -LE:/Coding/C++/build/watch/install/bin  -ldswatch -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

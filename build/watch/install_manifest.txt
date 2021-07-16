@@ -1,2 +1,4 @@
-E:/Coding/C++/build/watch/../../lib/libdswatch.dll.a
-E:/Coding/C++/build/watch/../../bin/libdswatch.dll
+E:/Coding/C++/build/watch/install/lib/libdswatch.dll.a
+E:/Coding/C++/build/watch/install/bin/libdswatch.dll
+E:/Coding/C++/build/watch/install/inc/dsdefine.h
+E:/Coding/C++/build/watch/install/inc/dswatch.h

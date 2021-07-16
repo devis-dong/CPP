@@ -248,9 +248,6 @@ CMAKE_STRIP:FILEPATH=D:/ProgramFiles/mingw/x86_64-8.1.0-posix-seh-rt_v6-rev0/min
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Dependencies for the target
-dslogger_LIB_DEPENDS:STATIC=general;libdswatch.dll;
-
 //Value Computed by CMake
 prj_BINARY_DIR:STATIC=E:/Coding/C++/build/logger
 
