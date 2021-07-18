@@ -1,1 +1,0 @@
-  -LE:/Coding/C++/build/dslogger/install/bin  -LE:/Coding/C++/build/dsmat/install/bin  -ldslogger -ldsmat -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

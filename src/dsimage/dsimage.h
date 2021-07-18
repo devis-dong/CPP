@@ -1,10 +1,10 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 12:53:01
- * @LastEditTime: 2021-07-16 19:34:13
+ * @LastEditTime: 2021-07-17 22:17:42
  * @LastEditors: devis dong
  * @Description: 
- * @FilePath: \C++\src\image\dsimage.h
+ * @FilePath: \C++\src\dsimage\dsimage.h
  */
 
 #ifndef DSIMAGE_H
@@ -19,16 +19,22 @@ namespace ds
     {
         public:
             Image();
+            Image(I const string& filepath, I const int flag=1);
             Image(I const int height, I const int width, I const int channels=1);
             template<typename R>
             Image(I const int height, I const int width, I const int channels, I const R* const pdata);
             template<typename R>
             Image(I const Image<R> &img);
             ~Image();
+            void show(I const string winname="");
+            void close();
+            void close(I const string winname);
+            void waitkey(I const int delay=0);
             int reset(I const int height, I const int width, I const int channels);
             int width() const;
             int height() const;
             int channels() const;
+            T* data();
             T& at(I const int y, I const int x, I const int c=0);
             T& at(I const int idx);
             T* ptr(I const int y, I const int x, I const int c=0);

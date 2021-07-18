@@ -1,10 +1,10 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 12:53:46
- * @LastEditTime: 2021-07-16 19:01:34
+ * @LastEditTime: 2021-07-18 00:22:08
  * @LastEditors: devis dong
  * @Description: 
- * @FilePath: \C++\src\mat\dsmat.h
+ * @FilePath: \C++\src\dsmat\dsmat.h
  */
 
 #ifndef DSMAT_H
@@ -23,7 +23,10 @@ namespace ds
     class Mat
     {
         public:
+            static Mat<T> convolve(I const Mat<T>& mat, I const Mat<T>& kernel);
+        public:
             Mat();
+            Mat(I const string& filepath, I const int flag=1);
             Mat(I initializer_list<int> shape);
             template <typename R>
             Mat(I initializer_list<int> shape, I const R* pdata);

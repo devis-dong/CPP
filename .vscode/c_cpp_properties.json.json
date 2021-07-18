@@ -6,6 +6,10 @@
                 "${workspaceFolder}/inc",
                 "${workspaceFolder}/src",
                 "${workspaceFolder}/rsc",
+                "${workspaceFolder}/src/dslogger",
+                "${workspaceFolder}/src/dswatch",
+                "${workspaceFolder}/src/dsmat",
+                "${workspaceFolder}/src/dsimage",
                 "${workspaceFolder}/inc/opencv",
                 "${workspaceFolder}/inc/opencv2"
             ],

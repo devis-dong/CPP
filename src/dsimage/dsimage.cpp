@@ -1,31 +1,33 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-14 11:20:57
- * @LastEditTime: 2021-07-16 20:07:25
+ * @LastEditTime: 2021-07-17 22:16:57
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.cpp
  */
 
+#include <typeinfo>
 #include "dsimage.h"
-#include "dslogger.h"
+#include "opencv.hpp"
+#include "dsmat.cpp"
 
 namespace ds
 {
-    #ifndef logger_init
-    #define logger_init
-        logger(Logger::target_all, Logger::level_all, "");
-    #endif
-
     template <typename T>
     Image<T>::Image()
     : Mat<T>()
     {
-
     }
     template <typename T>
     Image<T>::Image(I const int height, I const int width, I const int channels)
     : Mat<T>({height, width, channels})
+    {
+    }
+
+    template <typename T>
+    Image<T>::Image(I const string& filepath, I const int flag)
+    : Mat<T>(filepath, flag)
     {
     }
 
@@ -55,21 +57,73 @@ namespace ds
     }
 
     template <typename T>
+    void Image<T>::show(I const string winname)
+    {
+        uchar* pdata = nullptr;
+        if(typeid(T) != typeid(uchar))
+        {
+            int n = Mat<T>::get_elements_num();
+            pdata = new uchar[n];
+            assert (nullptr != pdata);
+            for(int i = 0; i < n; ++i)
+            {
+                pdata[i] = (uchar)this->at(i);
+            }
+            cv::Mat cvimg(this->height(), this->width(), CV_8UC(this->channels()), pdata);
+            cv::imshow(winname, cvimg);
+        }
+        else
+        {
+            cv::Mat cvimg(this->height(), this->width(), CV_8UC(this->channels()), this->data());
+            cv::imshow(winname, cvimg);
+        }
+
+        if(nullptr != pdata)
+        {
+            delete[] pdata;
+        }
+    }
+
+    template <typename T>
+    void Image<T>::waitkey(I const int delay)
+    {
+        cv::waitKey(delay);
+    }
+
+    template <typename T>
+    void Image<T>::close(I const string winname)
+    {
+        cv::destroyWindow(winname);
+    }
+
+    template <typename T>
+    void Image<T>::close()
+    {
+        cv::destroyAllWindows();
+    }
+
+    template <typename T>
     int Image<T>::height() const
     {
-        return this->_shape[0];
+        return Mat<T>::shape()[0];
     }
 
     template <typename T>
     int Image<T>::width() const
     {
-        return this->_shape[1];
+        return Mat<T>::shape()[1];
     }
 
     template <typename T>
     int Image<T>::channels() const
     {
-        return this->_shape[2];
+        return Mat<T>::shape()[2];
+    }
+
+    template <typename T>
+    T* Image<T>::data()
+    {
+        return this->ptr(0);
     }
 
     template <typename T>

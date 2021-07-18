@@ -1,3 +1,0 @@
-D:\ProgramFiles\cmake\bin\cmake.exe -E rm -f CMakeFiles\dsimage.dir/objects.a
-D:\ProgramFiles\mingw\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\ar.exe qc CMakeFiles\dsimage.dir/objects.a @CMakeFiles\dsimage.dir\objects1.rsp
-D:\ProgramFiles\mingw\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe -shared -o lib\libdsimage.dll -Wl,--out-implib,lib\libdsimage.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\dsimage.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\dsimage.dir\linklibs.rsp

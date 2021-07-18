@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 12:56:45
- * @LastEditTime: 2021-07-15 17:41:24
+ * @LastEditTime: 2021-07-17 17:34:24
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\common\dsdefine.h
@@ -46,7 +46,7 @@
 #endif
 
 #define LOGTARGET   Logger::target_all
-#define LOGLEVEL    Logger::level_all
+#define LOGLEVEL    Logger::level_info
 #define LOGFILE     "logs/log.txt"
 
 typedef enum ds_ostype_
