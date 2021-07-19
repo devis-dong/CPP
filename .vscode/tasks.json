@@ -133,6 +133,7 @@
                 "-o", "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
                 "-I", "${workspaceFolder}/src/common",
                 "-I", "${workspaceFolder}/src/dswatch",
+                "-I", "${workspaceFolder}/src/dsvec",
                 "-I", "${workspaceFolder}/src/dsmat",
                 "-I", "${workspaceFolder}/inc",
                 "-I", "${workspaceFolder}/inc/opencv",
