@@ -1,7 +1,0 @@
-E:/Coding/C++/build/dswatch/CMakeFiles/dswatch.dir
-E:/Coding/C++/build/dswatch/CMakeFiles/install/local.dir
-E:/Coding/C++/build/dswatch/CMakeFiles/install.dir
-E:/Coding/C++/build/dswatch/CMakeFiles/edit_cache.dir
-E:/Coding/C++/build/dswatch/CMakeFiles/rebuild_cache.dir
-E:/Coding/C++/build/dswatch/CMakeFiles/list_install_components.dir
-E:/Coding/C++/build/dswatch/CMakeFiles/install/strip.dir

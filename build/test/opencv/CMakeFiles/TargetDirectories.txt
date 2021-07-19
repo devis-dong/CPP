@@ -1,3 +1,0 @@
-E:/Coding/C++/build/test/opencv/CMakeFiles/test_opencv.dir
-E:/Coding/C++/build/test/opencv/CMakeFiles/edit_cache.dir
-E:/Coding/C++/build/test/opencv/CMakeFiles/rebuild_cache.dir

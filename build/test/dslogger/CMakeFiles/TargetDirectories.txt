@@ -1,3 +1,0 @@
-E:/Coding/C++/build/test/dslogger/CMakeFiles/test_dslogger.dir
-E:/Coding/C++/build/test/dslogger/CMakeFiles/edit_cache.dir
-E:/Coding/C++/build/test/dslogger/CMakeFiles/rebuild_cache.dir

@@ -1,4 +1,0 @@
-E:/Coding/C++/build/dslogger/install/lib/libdslogger.dll.a
-E:/Coding/C++/build/dslogger/install/bin/libdslogger.dll
-E:/Coding/C++/build/dslogger/install/inc/dslogger.h
-E:/Coding/C++/build/dslogger/install/inc/dsdefine.h

@@ -1,3 +1,0 @@
-E:/Coding/C++/build/test/dswatch/CMakeFiles/test_dswatch.dir
-E:/Coding/C++/build/test/dswatch/CMakeFiles/edit_cache.dir
-E:/Coding/C++/build/test/dswatch/CMakeFiles/rebuild_cache.dir
