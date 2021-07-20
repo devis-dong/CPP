@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 12:56:45
- * @LastEditTime: 2021-07-17 17:34:24
+ * @LastEditTime: 2021-07-20 14:13:40
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\common\dsdefine.h
@@ -44,7 +44,7 @@
         #define DLL_IMPORT_DECL extern
     #endif
 #endif
-
+#define PI          3.14159265358979323846
 #define LOGTARGET   Logger::target_all
 #define LOGLEVEL    Logger::level_info
 #define LOGFILE     "logs/log.txt"

@@ -1,14 +1,14 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:59
- * @LastEditTime: 2021-07-20 10:52:10
+ * @LastEditTime: 2021-07-20 19:30:55
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.cpp
  */
 
 
-
+#include <math.h>
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -204,6 +204,101 @@ namespace ds
     }
 
     template <typename T>
+    T Image<T>::get_sum()
+    {
+        T sum = 0;
+        for(int i = 0; i < _len; ++i)
+        {
+            sum += _data[i];
+        }
+        return sum;
+    }
+
+    template <typename T>
+    Image<T>& Image<T>::operator+=(I const Image<T>& img0)
+    {
+        assert (_h == img0._h && _w == img0._w && _c == img0._c);
+        for(int i = 0; i < _len; ++i)
+        {
+            _data[i] += img0._data[i];
+        }
+        return *this;
+    }
+
+    template <typename T>
+    Image<T>& Image<T>::operator+=(I const T a)
+    {
+        for(int i = 0; i < _len; ++i)
+        {
+            _data[i] += a;
+        }
+        return *this;
+    }
+
+    template <typename T>
+    Image<T>& Image<T>::operator-=(I const Image<T>& img0)
+    {
+        assert (_h == img0._h && _w == img0._w && _c == img0._c);
+        for(int i = 0; i < _len; ++i)
+        {
+            _data[i] -= img0._data[i];
+        }
+        return *this;
+    }
+
+    template <typename T>
+    Image<T>& Image<T>::operator-=(I const T a)
+    {
+        for(int i = 0; i < _len; ++i)
+        {
+            _data[i] -= a;
+        }
+        return *this;
+    }
+
+    template <typename T>
+    Image<T>& Image<T>::operator*=(I const Image<T>& img0)
+    {
+        assert (_h == img0._h && _w == img0._w && _c == img0._c);
+        for(int i = 0; i < _len; ++i)
+        {
+            _data[i] *= img0._data[i];
+        }
+        return *this;
+    }
+
+    template <typename T>
+    Image<T>& Image<T>::operator*=(I const T a)
+    {
+        for(int i = 0; i < _len; ++i)
+        {
+            _data[i] *= a;
+        }
+        return *this;
+    }
+
+    template <typename T>
+    Image<T>& Image<T>::operator/=(I const Image<T>& img0)
+    {
+        assert (_h == img0._h && _w == img0._w && _c == img0._c);
+        for(int i = 0; i < _len; ++i)
+        {
+            _data[i] /= img0._data[i];
+        }
+        return *this;
+    }
+
+    template <typename T>
+    Image<T>& Image<T>::operator/=(I const T a)
+    {
+        for(int i = 0; i < _len; ++i)
+        {
+            _data[i] /= a;
+        }
+        return *this;
+    }
+
+    template <typename T>
     void show_image(I Image<T>& img, I string winname)
     {
         uchar* data = nullptr;
@@ -249,11 +344,16 @@ namespace ds
     T sumproduct(I Image<U>& img, I Image<V>& ker, I const int offset[3])
     {
         T sum = 0;
-        for(int y = 0, i = 0, j0 = offset[0]*img._w*img._c + offset[1]*img._c + offset[2]; y < ker._h; ++y, j0 += img._w*img._c)
+        int y = 0, x = 0, z = 0, i0 = 0, i1 = 0, i = 0, j0 = 0, j1 = 0, j = 0;
+        int offset_img[3] = {offset[0] > 0 ? offset[0] : 0, offset[1] > 0 ? offset[1] : 0, offset[2] > 0 ? offset[2] : 0};
+        int offset_ker[3] = {offset[0] < 0 ? -offset[0] : 0, offset[1] < 0 ? -offset[1] : 0, offset[2] < 0 ? -offset[2] : 0};
+        i0 = offset_ker[0]*ker._w*ker._c + offset_ker[1]*ker._c + offset_ker[2];
+        j0 = offset_img[0]*img._w*img._c + offset_img[1]*img._c + offset_img[2];
+        for(y = 0; y < ker._h; ++y, i0 += ker._w*ker._c, j0 += img._w*img._c)
         {
-            for(int x = 0, j1 = j0; x < ker._w; ++x, j1 += img._c)
+            for(x = 0, i1 = i0, j1 = j0; x < ker._w; ++x, i1 += ker._c, j1 += img._c)
             {
-                for(int z = 0, j = j1; z < ker._c; ++z, ++i, ++j)
+                for(z = 0, i = i1, j = j1; z < ker._c; ++z, ++i, ++j)
                 {
                     sum += ker._data[i] * img._data[j];
                 }
@@ -263,16 +363,18 @@ namespace ds
     }
 
     template<typename U, typename V, typename T>
-    Image<T> convolve(I Image<U>& img, I Image<V>& ker, I const int step[3])
+    Image<T> convolve(I Image<U>& img, I Image<V>& ker, I const int step[3], I const int pad_size[3])
     {
-        int max_offset[3] = {img._h - ker._h, img._w - ker._w, img._c - ker._c};
-        int offset[3] = {0, 0, 0}, i = 0;
-        Image<T> con((img._h-ker._h)/step[0]+1, (img._w-ker._w)/step[1]+1, (img._c-ker._c)/step[2]+1);
-        for(offset[0] = 0; offset[0] <= max_offset[0]; offset[0] += step[0])
+        int con_shape[3] = {(img._h+2*pad_size[0]-ker._h)/step[0]+1, (img._w+2*pad_size[1]-ker._w)/step[1]+1, (img._c+2*pad_size[2]-ker._c)/step[2]+1};
+        int start[3] = {-pad_size[0], -pad_size[1], -pad_size[2]};
+        int end[3] = {start[0] + con_shape[0], start[1] + con_shape[1], start[2] + con_shape[2]};
+        Image<T> con(con_shape[0], con_shape[1], con_shape[2]);
+        int offset[3] = {0}, i = 0;
+        for(offset[0] = start[0]; offset[0] < end[0]; offset[0] += step[0])
         {
-            for(offset[1] = 0; offset[1] <= max_offset[1]; offset[1] += step[1])
+            for(offset[1] = start[1]; offset[1] < end[1]; offset[1] += step[1])
             {
-                for(offset[2] = 0; offset[2] <= max_offset[2]; offset[2] += step[2])
+                for(offset[2] = start[2]; offset[2] < end[2]; offset[2] += step[2])
                 {
                     con._data[i++] = sumproduct<U, V, T>(img, ker, offset);
                 }
@@ -315,6 +417,190 @@ namespace ds
             }
         }
         return sampleimg;
+    }
+
+    template <typename T>
+    Image<T> generate_gaussian_mat(I const int shape[3], I const double sigma, I const bool norm)
+    {
+        Image<T> g_mat(shape[0], shape[1], shape[2]);
+        T A = 0.5/(PI*sigma*sigma);
+        double o[3] = {(g_mat._h-1)/2.0, (g_mat._w-1)/2.0, (g_mat._c-1)/2.0};
+        int y = 0, x = 0, z = 0, i = 0;
+        for(y = 0; y < g_mat._h; ++y)
+        {
+            for(x = 0; x < g_mat._w; ++x)
+            {
+                T val = A * exp(-0.5*((y-o[0])*(y-o[0]) + (x-o[1])*(x-o[1]))/(sigma*sigma));
+                for(z = 0; z < g_mat._c; ++z)
+                {
+                    g_mat._data[i++] = val;
+                }
+            }
+        }
+        if(norm) g_mat /= g_mat.get_sum();
+        return g_mat;
+    }
+
+    template <typename T>
+    Image<T> gaussian_blur(I Image<T>& img, I const int ker_shape[3], I const double sigma)
+    {
+        Image<double> ker = generate_gaussian_mat<double>(ker_shape, sigma, true);
+        int step[3] = {1, 1, 1};
+        int pad_size[3] = {int(0.5*((img._h-1)*step[0]+ker_shape[0]-img._h)), int(0.5*((img._w-1)*step[1]+ker_shape[1]-img._w)), int(0.5*((img._c-1)*step[2]+ker_shape[2]-img._c))};
+        return convolve<T, double, T>(img, ker, step, pad_size);
+    }
+
+    template <typename T>
+    void print_image(I Image<T>& img)
+    {
+        cout<<"["<<endl;
+        for(int y = 0, i = 0; y < img._h; ++y)
+        {
+            cout<<" [ ";
+            for(int x = 0; x < img._w; ++x)
+            {
+                cout<<"[ ";
+                for(int z = 0; z < img._c; ++z)
+                {
+                    cout<<img._data[i++]<<" ";
+                }
+                cout<<"]";
+            }
+            cout<<" ]"<<endl;
+        }
+        cout<<"]"<<endl;
+    }
+
+    template <typename T>
+    Image<T> operator+(I const Image<T>& img0, I const Image<T>& img1)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] += img1._data[i];
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator+(I const Image<T>& img0, I const T a)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] += a;
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator+(I const T a, I const Image<T>& img0)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] += a;
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator-(I const Image<T>& img0, I const Image<T>& img1)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] -= img1._data[i];
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator-(I const Image<T>& img0, I const T a)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] -= a;
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator-(I const T a, I const Image<T>& img0)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] = a - img_prime._data[i];
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator*(I const Image<T>& img0, I const Image<T>& img1)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] *= img1._data[i];
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator*(I const Image<T>& img0, I const T a)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] *= a;
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator*(I const T a, I const Image<T>& img0)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] *= a;
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator/(I const Image<T>& img0, I const Image<T>& img1)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] /= img1._data[i];
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator/(I const Image<T>& img0, I const T a)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] /= a;
+        }
+        return img_prime;
+    }
+
+    template <typename T>
+    Image<T> operator/(I const T a, I const Image<T>& img0)
+    {
+        Image<T> img_prime(img0);
+        for(int i = 0; i < img_prime._len; ++i)
+        {
+            img_prime._data[i] = a / img_prime._data[i];
+        }
+        return img_prime;
     }
 
 }
