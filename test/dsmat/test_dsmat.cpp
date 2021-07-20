@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-16 14:32:00
- * @LastEditTime: 2021-07-19 14:06:59
+ * @LastEditTime: 2021-07-19 20:01:48
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\test\dsmat\test_dsmat.cpp
@@ -17,7 +17,7 @@ int main()
 {
     printf("running...\n");
 
-    Mat<unsigned char> img("E:/Coding/C++/bin/imgs/lenna.jpg", 0);
+    Mat<unsigned char> img("E:/Coding/C++/bin/imgs/lenna.jpg", 1);
     printf("%d x %d x %d\n", img._shape[0], img._shape[1], img._shape[2]);
     Mat<unsigned char>::show(img, "lenna");
     Mat<double> ker({3, 3, 1}, 1.0);

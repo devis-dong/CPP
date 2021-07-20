@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 00:48:35
- * @LastEditTime: 2021-07-19 19:54:37
+ * @LastEditTime: 2021-07-19 23:22:25
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsmat\dsmat_cpp.cpp
@@ -238,6 +238,7 @@ namespace ds
         _data = new T[_len];
         assert (_data != nullptr);
         memcpy(_data, obj._data, _len*sizeof(T));
+        return *this;
     }
 
     template <typename T>
