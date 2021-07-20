@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:59
- * @LastEditTime: 2021-07-20 22:25:51
+ * @LastEditTime: 2021-07-20 22:46:46
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.cpp
@@ -643,10 +643,10 @@ namespace ds
     // }
 
     template <typename T>
-    GaussPyr<T> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma)
+    Pyramid<T> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma)
     {
         assert (intvs >= 3);
-        GaussPyr<T> pyr;
+        Pyramid<T> pyr;
         pyr.octvs = octvs;
         pyr.intvs = intvs;
         pyr.imgs = new Image<T>*[octvs];
@@ -678,7 +678,7 @@ namespace ds
     }
 
     template <typename T>
-    void destroy_gauss_pyr(I GaussPyr<T>& pyr)
+    void destroy_pyramid(I Pyramid<T>& pyr)
     {
         for(int i = 0; i < pyr.octvs; ++i)
         {
@@ -687,6 +687,24 @@ namespace ds
         }
         delete[] pyr.imgs;
         pyr.imgs = nullptr;
+    }
+
+    template <typename T>
+    Pyramid<T> create_diff_pyramid(I const Pyramid<T>& gauss_pyr)
+    {
+        Pyramid<T> diff_pyr;
+        diff_pyr.octvs = gauss_pyr.octvs;
+        diff_pyr.intvs = gauss_pyr.intvs-1;
+        diff_pyr.imgs = new Image<T>*[gauss_pyr.octvs];
+        for(int i = 0; i < gauss_pyr.octvs; ++i)
+        {
+            diff_pyr.imgs[i] = new Image<T>[gauss_pyr.intvs-1];
+            for(int j = 0; j < gauss_pyr.intvs-1; ++j)
+            {
+                diff_pyr.imgs[i][j] = gauss_pyr.imgs[i][j+1] - gauss_pyr.imgs[i][j];
+            }
+        }
+        return diff_pyr;
     }
 
 }

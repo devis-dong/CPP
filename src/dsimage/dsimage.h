@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:48
- * @LastEditTime: 2021-07-20 22:21:34
+ * @LastEditTime: 2021-07-20 22:32:44
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.h
@@ -143,17 +143,20 @@ namespace ds
     // vector<vector<Image<T>>> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvls, I const double sigma);
 
     template <typename T>
-    struct GaussPyr
+    struct Pyramid
     {
         Image<T>** imgs;
         int octvs, intvs;
     };
 
     template <typename T>
-    GaussPyr<T> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma);
+    Pyramid<T> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma);
 
     template <typename T>
-    void destroy_gauss_pyr(I GaussPyr<T>& pyr);
+    void destroy_pyramid(I Pyramid<T>& pyr);
+
+    template <typename T>
+    Pyramid<T> create_diff_pyramid(I const Pyramid<T>& gauss_pyr);
 
 } // namespace ds
 
