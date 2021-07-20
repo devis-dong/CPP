@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:59
- * @LastEditTime: 2021-07-20 19:30:55
+ * @LastEditTime: 2021-07-20 22:25:51
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.cpp
@@ -340,116 +340,6 @@ namespace ds
         cv::destroyAllWindows();
     }
 
-    template <typename U, typename V, typename T>
-    T sumproduct(I Image<U>& img, I Image<V>& ker, I const int offset[3])
-    {
-        T sum = 0;
-        int y = 0, x = 0, z = 0, i0 = 0, i1 = 0, i = 0, j0 = 0, j1 = 0, j = 0;
-        int offset_img[3] = {offset[0] > 0 ? offset[0] : 0, offset[1] > 0 ? offset[1] : 0, offset[2] > 0 ? offset[2] : 0};
-        int offset_ker[3] = {offset[0] < 0 ? -offset[0] : 0, offset[1] < 0 ? -offset[1] : 0, offset[2] < 0 ? -offset[2] : 0};
-        i0 = offset_ker[0]*ker._w*ker._c + offset_ker[1]*ker._c + offset_ker[2];
-        j0 = offset_img[0]*img._w*img._c + offset_img[1]*img._c + offset_img[2];
-        for(y = 0; y < ker._h; ++y, i0 += ker._w*ker._c, j0 += img._w*img._c)
-        {
-            for(x = 0, i1 = i0, j1 = j0; x < ker._w; ++x, i1 += ker._c, j1 += img._c)
-            {
-                for(z = 0, i = i1, j = j1; z < ker._c; ++z, ++i, ++j)
-                {
-                    sum += ker._data[i] * img._data[j];
-                }
-            }
-        }
-        return sum;
-    }
-
-    template<typename U, typename V, typename T>
-    Image<T> convolve(I Image<U>& img, I Image<V>& ker, I const int step[3], I const int pad_size[3])
-    {
-        int con_shape[3] = {(img._h+2*pad_size[0]-ker._h)/step[0]+1, (img._w+2*pad_size[1]-ker._w)/step[1]+1, (img._c+2*pad_size[2]-ker._c)/step[2]+1};
-        int start[3] = {-pad_size[0], -pad_size[1], -pad_size[2]};
-        int end[3] = {start[0] + con_shape[0], start[1] + con_shape[1], start[2] + con_shape[2]};
-        Image<T> con(con_shape[0], con_shape[1], con_shape[2]);
-        int offset[3] = {0}, i = 0;
-        for(offset[0] = start[0]; offset[0] < end[0]; offset[0] += step[0])
-        {
-            for(offset[1] = start[1]; offset[1] < end[1]; offset[1] += step[1])
-            {
-                for(offset[2] = start[2]; offset[2] < end[2]; offset[2] += step[2])
-                {
-                    con._data[i++] = sumproduct<U, V, T>(img, ker, offset);
-                }
-            }
-        }
-        return con;
-    }
-
-    template <typename U, typename V, typename T>
-    void convolve(I Image<U>& img, I Image<V>& ker, I const int step[3], I O Image<T>& con)
-    {
-        int max_offset[3] = {img._h - ker._h, img._w - ker._w, img._c - ker._c};
-        int offset[3] = {0, 0, 0}, i = 0;
-        con.reset((img._h-ker._h)/step[0]+1, (img._w-ker._w)/step[1]+1, (img._c-ker._c)/step[2]+1);
-        for(offset[0] = 0; offset[0] <= max_offset[0]; offset[0] += step[0])
-        {
-            for(offset[1] = 0; offset[1] <= max_offset[1]; offset[1] += step[1])
-            {
-                for(offset[2] = 0; offset[2] <= max_offset[2]; offset[2] += step[2])
-                {
-                    con._data[i++] = sumproduct<U, V, T>(img, ker, offset);
-                }
-            }
-        }
-    }
-
-    template <typename T>
-    Image<T> sample(I Image<T>& img, I const double rate[3])
-    {
-        Image<T> sampleimg(img._h*rate[0], img._w*rate[1], img._c*rate[2]);
-        double r[3] = {double(sampleimg._h)/double(img._h), double(sampleimg._w)/double(img._w), double(sampleimg._c)/double(img._c)};
-        for(int y = 0, i = 0, j0 = 0; y < sampleimg._h; ++y, j0 = int(y/r[0])*img._w*img._c)
-        {
-            for(int x = 0, j1 = j0; x < sampleimg._w; ++x, j1 = j0+int(x/r[1])*img._c)
-            {
-                for(int z = 0, j = j1; z < sampleimg._c; ++z, ++i, j = j1 + int(z/r[2]))
-                {
-                    sampleimg._data[i] = img._data[j];
-                }
-            }
-        }
-        return sampleimg;
-    }
-
-    template <typename T>
-    Image<T> generate_gaussian_mat(I const int shape[3], I const double sigma, I const bool norm)
-    {
-        Image<T> g_mat(shape[0], shape[1], shape[2]);
-        T A = 0.5/(PI*sigma*sigma);
-        double o[3] = {(g_mat._h-1)/2.0, (g_mat._w-1)/2.0, (g_mat._c-1)/2.0};
-        int y = 0, x = 0, z = 0, i = 0;
-        for(y = 0; y < g_mat._h; ++y)
-        {
-            for(x = 0; x < g_mat._w; ++x)
-            {
-                T val = A * exp(-0.5*((y-o[0])*(y-o[0]) + (x-o[1])*(x-o[1]))/(sigma*sigma));
-                for(z = 0; z < g_mat._c; ++z)
-                {
-                    g_mat._data[i++] = val;
-                }
-            }
-        }
-        if(norm) g_mat /= g_mat.get_sum();
-        return g_mat;
-    }
-
-    template <typename T>
-    Image<T> gaussian_blur(I Image<T>& img, I const int ker_shape[3], I const double sigma)
-    {
-        Image<double> ker = generate_gaussian_mat<double>(ker_shape, sigma, true);
-        int step[3] = {1, 1, 1};
-        int pad_size[3] = {int(0.5*((img._h-1)*step[0]+ker_shape[0]-img._h)), int(0.5*((img._w-1)*step[1]+ker_shape[1]-img._w)), int(0.5*((img._c-1)*step[2]+ker_shape[2]-img._c))};
-        return convolve<T, double, T>(img, ker, step, pad_size);
-    }
-
     template <typename T>
     void print_image(I Image<T>& img)
     {
@@ -601,6 +491,202 @@ namespace ds
             img_prime._data[i] = a / img_prime._data[i];
         }
         return img_prime;
+    }
+
+    template <typename U, typename V, typename T>
+    T sumproduct(I Image<U>& img, I Image<V>& ker, I const int offset[3])
+    {
+        T sum = 0;
+        int offset_img[3] = {offset[0] > 0 ? offset[0] : 0, offset[1] > 0 ? offset[1] : 0, offset[2] > 0 ? offset[2] : 0};
+        int offset_ker[3] = {offset[0] < 0 ? -offset[0] : 0, offset[1] < 0 ? -offset[1] : 0, offset[2] < 0 ? -offset[2] : 0};
+        int iy = 0, ix = 0, iz = 0, ky = 0, kx = 0, kz = 0, i = 0, k = 0, i1 = 0, k1 = 0;
+        int i0 = offset_img[0]*img._w*img._c + offset_img[1]*img._c + offset_img[2];
+        int k0 = offset_ker[0]*ker._w*ker._c + offset_ker[1]*ker._c + offset_ker[2];
+        for(iy = offset_img[0], ky = offset_ker[0]; iy < img._h && ky < ker._h; ++iy, ++ky, i0 += img._w*img._c, k0 += ker._w*ker._c)
+        {
+            for(ix = offset_img[1], kx = offset_ker[1], i1 = i0, k1 = k0; ix < img._w && kx < ker._w; ++ix, ++kx, i1 += img._c, k1 += ker._c)
+            {
+                for(iz = offset_img[2], kz = offset_ker[2], i = i1, k = k1; iz < img._c && kz < ker._c; ++iz, ++kz, ++i, ++k)
+                {
+                    sum += img._data[i] * ker._data[k];
+                }
+            }
+        }
+        return sum;
+    }
+
+    template<typename U, typename V, typename T>
+    Image<T> convolve(I Image<U>& img, I Image<V>& ker, I const int step[3], I const int pad_size[3])
+    {
+        int con_shape[3] = {(img._h+2*pad_size[0]-ker._h)/step[0]+1, (img._w+2*pad_size[1]-ker._w)/step[1]+1, (img._c+2*pad_size[2]-ker._c)/step[2]+1};
+        int start[3] = {-pad_size[0], -pad_size[1], -pad_size[2]};
+        int end[3] = {start[0] + con_shape[0], start[1] + con_shape[1], start[2] + con_shape[2]};
+        Image<T> con(con_shape[0], con_shape[1], con_shape[2]);
+        int offset[3] = {0}, i = 0;
+        for(offset[0] = start[0]; offset[0] < end[0]; offset[0] += step[0])
+        {
+            for(offset[1] = start[1]; offset[1] < end[1]; offset[1] += step[1])
+            {
+                for(offset[2] = start[2]; offset[2] < end[2]; offset[2] += step[2])
+                {
+                    con._data[i++] = sumproduct<U, V, T>(img, ker, offset);
+                }
+            }
+        }
+        return con;
+    }
+
+    template <typename U, typename V, typename T>
+    void convolve(I Image<U>& img, I Image<V>& ker, I const int step[3], I O Image<T>& con)
+    {
+        int max_offset[3] = {img._h - ker._h, img._w - ker._w, img._c - ker._c};
+        int offset[3] = {0, 0, 0}, i = 0;
+        con.reset((img._h-ker._h)/step[0]+1, (img._w-ker._w)/step[1]+1, (img._c-ker._c)/step[2]+1);
+        for(offset[0] = 0; offset[0] <= max_offset[0]; offset[0] += step[0])
+        {
+            for(offset[1] = 0; offset[1] <= max_offset[1]; offset[1] += step[1])
+            {
+                for(offset[2] = 0; offset[2] <= max_offset[2]; offset[2] += step[2])
+                {
+                    con._data[i++] = sumproduct<U, V, T>(img, ker, offset);
+                }
+            }
+        }
+    }
+
+    template <typename T>
+    Image<T> sample_image(I Image<T>& img, I const double rate[3])
+    {
+        Image<T> sampleimg(img._h*rate[0], img._w*rate[1], img._c*rate[2]);
+        double r[3] = {double(sampleimg._h)/double(img._h), double(sampleimg._w)/double(img._w), double(sampleimg._c)/double(img._c)};
+        for(int y = 0, i = 0, j0 = 0; y < sampleimg._h; ++y, j0 = int(y/r[0])*img._w*img._c)
+        {
+            for(int x = 0, j1 = j0; x < sampleimg._w; ++x, j1 = j0+int(x/r[1])*img._c)
+            {
+                for(int z = 0, j = j1; z < sampleimg._c; ++z, ++i, j = j1 + int(z/r[2]))
+                {
+                    sampleimg._data[i] = img._data[j];
+                }
+            }
+        }
+        return sampleimg;
+    }
+
+    template <typename T>
+    Image<T> generate_gaussian_mat(I const int shape[3], I const double sigma, I const bool norm)
+    {
+        Image<T> g_mat(shape[0], shape[1], shape[2]);
+        T A = 0.5/(PI*sigma*sigma);
+        double o[3] = {(g_mat._h-1)/2.0, (g_mat._w-1)/2.0, (g_mat._c-1)/2.0};
+        int y = 0, x = 0, z = 0, i = 0;
+        for(y = 0; y < g_mat._h; ++y)
+        {
+            for(x = 0; x < g_mat._w; ++x)
+            {
+                T val = A * exp(-0.5*((y-o[0])*(y-o[0]) + (x-o[1])*(x-o[1]))/(sigma*sigma));
+                for(z = 0; z < g_mat._c; ++z)
+                {
+                    g_mat._data[i++] = val;
+                }
+            }
+        }
+        if(norm) g_mat /= g_mat.get_sum();
+        return g_mat;
+    }
+
+    template <typename T>
+    Image<T> gaussian_blur(I Image<T>& img, I const int ker_shape[3], I const double sigma)
+    {
+        Image<double> ker = generate_gaussian_mat<double>(ker_shape, sigma, true);
+        int step[3] = {1, 1, 1};
+        int pad_size[3] = {int(0.5*((img._h-1)*step[0]+ker_shape[0]-img._h)), int(0.5*((img._w-1)*step[1]+ker_shape[1]-img._w)), int(0.5*((img._c-1)*step[2]+ker_shape[2]-img._c))};
+        return convolve<T, double, T>(img, ker, step, pad_size);
+    }
+
+    // template <typename T>
+    // vector<vector<Image<T>>> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma)
+    // {
+    //     vector<vector<Image<T>>> pyr(octvs);
+    //     double sample_rate[3] = {0.5, 0.5, 1};
+    //     Image<double> ker, B;
+    //     int ker_shape[3] = {int(6*sigma+1.5)/2*2+1, int(6*sigma+1.5)/2*2+1, 1};
+    //     int step[3] = {1, 1, 1};
+    //     int h = img._h/sample_rate[0], w = img._w/sample_rate[1], c = img._c/sample_rate[2];
+    //     for(int i = 0; i < octvs; ++i)
+    //     {
+    //         pyr[i].resize(intvs+3);
+    //         // ker = generate_gaussian_mat<double>(ker_shape, sigma*pow(2, i), true);
+    //         // h *= sample_rate[0]; w *= sample_rate[1]; c *= sample_rate[2];
+    //         // int pad_size[3] = {int(0.5*((h-1)*step[0]+ker_shape[0]-h)), int(0.5*((w-1)*step[1]+ker_shape[1]-w)), int(0.5*((c-1)*step[2]+ker_shape[2]-c))};
+    //         // double k = pow(2.0, 1.0/double(intvs)), a = 0.5/(PI*sigma*sigma*pow(2, 2*i));
+    //         // B = (a*k)/ker;
+    //         // B *= B;
+    //         for(int j = 0; j < intvs+3; ++j)
+    //         {
+    //             if(0 == i && 0 == j)
+    //             {
+    //                 pyr[i][j] = img;
+    //             }
+    //             else if(0 == j)
+    //             {
+    //                 pyr[i][j] = sample_image<T>(pyr[i-1][intvs], sample_rate);
+    //             }
+    //             else
+    //             {
+    //                 // ker *= B;
+    //                 // pyr[i][j] = convolve<T, double, T>(pyr[i][j-1], ker, step, pad_size);
+    //                 pyr[i][j] = gaussian_blur(pyr[i][j-1], ker_shape, sigma*pow(2, i+j/intvs));
+    //             }
+    //         }
+    //     }
+    //     return pyr;
+    // }
+
+    template <typename T>
+    GaussPyr<T> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma)
+    {
+        assert (intvs >= 3);
+        GaussPyr<T> pyr;
+        pyr.octvs = octvs;
+        pyr.intvs = intvs;
+        pyr.imgs = new Image<T>*[octvs];
+        double sample_rate[3] = {0.5, 0.5, 1};
+        Image<double> ker, B;
+        int ker_shape[3] = {int(6*sigma+1.5)/2*2+1, int(6*sigma+1.5)/2*2+1, 1};
+        int step[3] = {1, 1, 1};
+        int h = img._h/sample_rate[0], w = img._w/sample_rate[1], c = img._c/sample_rate[2];
+        for(int i = 0; i < octvs; ++i)
+        {
+            pyr.imgs[i] = new Image<T>[intvs];
+            for(int j = 0; j < intvs; ++j)
+            {
+                if(0 == i && 0 == j)
+                {
+                    pyr.imgs[i][j] = img;
+                }
+                else if(0 == j)
+                {
+                    pyr.imgs[i][j] = sample_image<T>(pyr.imgs[i-1][intvs-3], sample_rate);
+                }
+                else
+                {
+                    pyr.imgs[i][j] = gaussian_blur(pyr.imgs[i][j-1], ker_shape, sigma*pow(2, i+j/intvs));
+                }
+            }
+        }
+        return pyr;
+    }
+
+    template <typename T>
+    void destroy_gauss_pyr(I GaussPyr<T>& pyr)
+    {
+        for(int i = 0; i < pyr.octvs; ++i)
+        {
+            delete[] pyr.imgs[i];
+            pyr.imgs[i] = nullptr;
+        }
+        delete[] pyr.imgs;
+        pyr.imgs = nullptr;
     }
 
 }

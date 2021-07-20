@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:48
- * @LastEditTime: 2021-07-20 19:29:32
+ * @LastEditTime: 2021-07-20 22:21:34
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.h
@@ -11,6 +11,7 @@
 #ifndef DSIMAGE_H
 #define DSIMAGE_H
 
+#include <vector>
 #include <string>
 #include "dsdefine.h"
 using namespace std;
@@ -130,13 +131,29 @@ namespace ds
     void convolve(I Image<U>& img, I Image<V>& ker, I const int step[3], I O Image<T>& con);
 
     template <typename T>
-    Image<T> sample(I Image<T>& img, I const double rate[3]);
+    Image<T> sample_image(I Image<T>& img, I const double rate[3]);
 
     template <typename T>
     Image<T> generate_gaussian_mat(I const int shape[3], I const double sigma=0.8, I const bool norm=false);
 
     template <typename T>
     Image<T> gaussian_blur(I Image<T>& img, I const int ker_shape[3], I const double sigma=0.8);
+
+    // template <typename T>
+    // vector<vector<Image<T>>> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvls, I const double sigma);
+
+    template <typename T>
+    struct GaussPyr
+    {
+        Image<T>** imgs;
+        int octvs, intvs;
+    };
+
+    template <typename T>
+    GaussPyr<T> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma);
+
+    template <typename T>
+    void destroy_gauss_pyr(I GaussPyr<T>& pyr);
 
 } // namespace ds
 
