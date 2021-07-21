@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:59
- * @LastEditTime: 2021-07-20 22:46:46
+ * @LastEditTime: 2021-07-21 13:08:08
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.cpp
@@ -603,109 +603,6 @@ namespace ds
         return convolve<T, double, T>(img, ker, step, pad_size);
     }
 
-    // template <typename T>
-    // vector<vector<Image<T>>> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma)
-    // {
-    //     vector<vector<Image<T>>> pyr(octvs);
-    //     double sample_rate[3] = {0.5, 0.5, 1};
-    //     Image<double> ker, B;
-    //     int ker_shape[3] = {int(6*sigma+1.5)/2*2+1, int(6*sigma+1.5)/2*2+1, 1};
-    //     int step[3] = {1, 1, 1};
-    //     int h = img._h/sample_rate[0], w = img._w/sample_rate[1], c = img._c/sample_rate[2];
-    //     for(int i = 0; i < octvs; ++i)
-    //     {
-    //         pyr[i].resize(intvs+3);
-    //         // ker = generate_gaussian_mat<double>(ker_shape, sigma*pow(2, i), true);
-    //         // h *= sample_rate[0]; w *= sample_rate[1]; c *= sample_rate[2];
-    //         // int pad_size[3] = {int(0.5*((h-1)*step[0]+ker_shape[0]-h)), int(0.5*((w-1)*step[1]+ker_shape[1]-w)), int(0.5*((c-1)*step[2]+ker_shape[2]-c))};
-    //         // double k = pow(2.0, 1.0/double(intvs)), a = 0.5/(PI*sigma*sigma*pow(2, 2*i));
-    //         // B = (a*k)/ker;
-    //         // B *= B;
-    //         for(int j = 0; j < intvs+3; ++j)
-    //         {
-    //             if(0 == i && 0 == j)
-    //             {
-    //                 pyr[i][j] = img;
-    //             }
-    //             else if(0 == j)
-    //             {
-    //                 pyr[i][j] = sample_image<T>(pyr[i-1][intvs], sample_rate);
-    //             }
-    //             else
-    //             {
-    //                 // ker *= B;
-    //                 // pyr[i][j] = convolve<T, double, T>(pyr[i][j-1], ker, step, pad_size);
-    //                 pyr[i][j] = gaussian_blur(pyr[i][j-1], ker_shape, sigma*pow(2, i+j/intvs));
-    //             }
-    //         }
-    //     }
-    //     return pyr;
-    // }
-
-    template <typename T>
-    Pyramid<T> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma)
-    {
-        assert (intvs >= 3);
-        Pyramid<T> pyr;
-        pyr.octvs = octvs;
-        pyr.intvs = intvs;
-        pyr.imgs = new Image<T>*[octvs];
-        double sample_rate[3] = {0.5, 0.5, 1};
-        Image<double> ker, B;
-        int ker_shape[3] = {int(6*sigma+1.5)/2*2+1, int(6*sigma+1.5)/2*2+1, 1};
-        int step[3] = {1, 1, 1};
-        int h = img._h/sample_rate[0], w = img._w/sample_rate[1], c = img._c/sample_rate[2];
-        for(int i = 0; i < octvs; ++i)
-        {
-            pyr.imgs[i] = new Image<T>[intvs];
-            for(int j = 0; j < intvs; ++j)
-            {
-                if(0 == i && 0 == j)
-                {
-                    pyr.imgs[i][j] = img;
-                }
-                else if(0 == j)
-                {
-                    pyr.imgs[i][j] = sample_image<T>(pyr.imgs[i-1][intvs-3], sample_rate);
-                }
-                else
-                {
-                    pyr.imgs[i][j] = gaussian_blur(pyr.imgs[i][j-1], ker_shape, sigma*pow(2, i+j/intvs));
-                }
-            }
-        }
-        return pyr;
-    }
-
-    template <typename T>
-    void destroy_pyramid(I Pyramid<T>& pyr)
-    {
-        for(int i = 0; i < pyr.octvs; ++i)
-        {
-            delete[] pyr.imgs[i];
-            pyr.imgs[i] = nullptr;
-        }
-        delete[] pyr.imgs;
-        pyr.imgs = nullptr;
-    }
-
-    template <typename T>
-    Pyramid<T> create_diff_pyramid(I const Pyramid<T>& gauss_pyr)
-    {
-        Pyramid<T> diff_pyr;
-        diff_pyr.octvs = gauss_pyr.octvs;
-        diff_pyr.intvs = gauss_pyr.intvs-1;
-        diff_pyr.imgs = new Image<T>*[gauss_pyr.octvs];
-        for(int i = 0; i < gauss_pyr.octvs; ++i)
-        {
-            diff_pyr.imgs[i] = new Image<T>[gauss_pyr.intvs-1];
-            for(int j = 0; j < gauss_pyr.intvs-1; ++j)
-            {
-                diff_pyr.imgs[i][j] = gauss_pyr.imgs[i][j+1] - gauss_pyr.imgs[i][j];
-            }
-        }
-        return diff_pyr;
-    }
 
 }
 

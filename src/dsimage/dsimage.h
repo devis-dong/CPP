@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:48
- * @LastEditTime: 2021-07-20 22:32:44
+ * @LastEditTime: 2021-07-21 15:56:48
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.h
@@ -40,7 +40,7 @@ namespace ds
             Image(I const Image<T>& obj);
             ~Image();
             Image<T>& operator=(I const Image<T>& obj);
-            T& at(I const unsigned int h, I const unsigned int w, I const unsigned int c);
+            T& at(I const unsigned int h, I const unsigned int w, I const unsigned int c=1);
             // Image<T> subimage(I const PixelPos& start, I const PixelPos& end);
             // Image<T> subimage(I const PixelPos& start, I const PixelPos& len);
             Image<T> subimage(I int const start[3], I const int len[3]);
@@ -138,25 +138,6 @@ namespace ds
 
     template <typename T>
     Image<T> gaussian_blur(I Image<T>& img, I const int ker_shape[3], I const double sigma=0.8);
-
-    // template <typename T>
-    // vector<vector<Image<T>>> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvls, I const double sigma);
-
-    template <typename T>
-    struct Pyramid
-    {
-        Image<T>** imgs;
-        int octvs, intvs;
-    };
-
-    template <typename T>
-    Pyramid<T> create_gauss_pyramid(I Image<T>& img, I const int octvs, I const int intvs, I const double sigma);
-
-    template <typename T>
-    void destroy_pyramid(I Pyramid<T>& pyr);
-
-    template <typename T>
-    Pyramid<T> create_diff_pyramid(I const Pyramid<T>& gauss_pyr);
 
 } // namespace ds
 
