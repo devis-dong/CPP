@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-21 13:05:14
- * @LastEditTime: 2021-07-23 01:06:12
+ * @LastEditTime: 2021-07-23 01:44:17
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dssift\dssift.h
@@ -16,7 +16,7 @@ namespace ds
     #define SIFT_INTVS 3                                        // number of images per octave(group)
     #define SIFT_CURV_THR 10                                    // main curvature threshold
     #define SIFT_MAX_INTERP_STEPS 5                             // max times for interpolation
-    #define SIFT_CONTR_THR 0.04                                 // contrast threshold
+    #define SIFT_CONTR_THR 0.07                                 // contrast threshold
     #define SIFT_IMG_UPSAMPLE 1                                 // whther to upsample the original image
     #define SIFT_ORI_HIST_BINS 36                               // orientation hitogram bins number
     #define SIFT_ORI_SIGMA_TIMES 1.5                            //

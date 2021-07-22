@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-21 13:05:23
- * @LastEditTime: 2021-07-23 01:03:11
+ * @LastEditTime: 2021-07-23 01:38:59
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dssift\dssift.cpp
@@ -21,6 +21,7 @@ namespace ds
     {
         Image img_gray;
         create_init_smooth_gray(img_ori, img_gray, sigma, upsample);
+        // show_image(img_gray, "gray");
         loginfo("step 1: building gaussian pyramid.");
         mywatch.start_clock();
         Pyramid gauss_pyr;
@@ -70,7 +71,7 @@ namespace ds
     }
 
  
-    int create_init_smooth_gray(I Image &src, O Image &dst, double sigma, I const int upsample)
+    int create_init_smooth_gray(I Image &src, O Image &dst, I double sigma, I const int upsample)
     {
         if(1 != src._c)
         {
@@ -88,8 +89,8 @@ namespace ds
             dst = sample_image(dst, rate);
         }
 
+        sigma = sqrt(sigma * sigma - (INIT_SIGMA * INIT_SIGMA)); //[1]-1层的sigma  
         int ker_shape[3] = {int(ceil(6*sigma + 1))/2*2 + 1, int(ceil(6*sigma + 1))/2*2 + 1, 1};
-        // double  sigma_init = sqrt(sigma * sigma - (INIT_SIGMA * 2) * (INIT_SIGMA * 2)); //[1]-1层的sigma  
         dst = gaussian_blur(dst, ker_shape, sigma);
         return 0;
     }

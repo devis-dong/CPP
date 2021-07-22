@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-21 13:08:48
- * @LastEditTime: 2021-07-23 01:03:46
+ * @LastEditTime: 2021-07-23 01:45:46
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\test\dssift\test_dssift.cpp
@@ -20,7 +20,7 @@ int main()
 {
     loginfo("running...\n");
 
-    Image img_ori("E:/Coding/C++/bin/imgs/lenna.jpg", 1);
+    // Image img_ori("E:/Coding/C++/bin/imgs/conan0.jpg", 1);
     // show_image(img_ori, string("img_ori: ") + to_string(img_ori._h) + " x " + to_string(img_ori._w) + " x " + to_string(img_ori._c));
     Watch mywatch;
     mywatch.start_clock();
@@ -86,25 +86,26 @@ int main()
     // delete[] gauss_pyr.imgs;
     // delete[] diff_pyr.imgs;
 
-    // Mat srcImage = imread("E:/Coding/C++/bin/imgs/lenna.jpg");
-	// int numFeatures = 20;
-	// cv::Ptr<SIFT> dectector = SIFT::create(numFeatures);
-	// vector<KeyPoint> keypoints;
-	// dectector->detect(srcImage, keypoints, Mat());
-	// printf("Total keypoints: %d\n", keypoints.size());
-	// Mat keypoint_img;
-	// drawKeypoints(srcImage, keypoints, keypoint_img, Scalar::all(-1), DrawMatchesFlags::DEFAULT);
-	// imshow("keypoint_img", keypoint_img);
-
     /*=======================================================================================*/
-    vector<KeyPoint> feats;
-    get_sift_features(img_ori, feats);
+    Image img0("E:/Coding/C++/bin/imgs/conan0.jpg", 1);
+    vector<KeyPoint> feats0;
+    get_sift_features(img0, feats0);
     mywatch.stop_clock();
-    loginfo("feats num: %d", feats.size());
-    loginfo("time cost: %fs, frame rate: %f.", mywatch.get_duration(), 1 / mywatch.get_duration());
-    draw_key_points(img_ori, feats);
-    draw_sift_features(img_ori, feats);
-    show_image(img_ori, "sift");
+    loginfo("img0 feats num: %d", feats0.size());
+    loginfo("img0 time cost: %fs, frame rate: %f.", mywatch.get_duration(), 1 / mywatch.get_duration());
+    draw_key_points(img0, feats0);
+    draw_sift_features(img0, feats0);
+    show_image(img0, "img0");
+
+    Image img1("E:/Coding/C++/bin/imgs/conan1.jpg", 1);
+    vector<KeyPoint> feats1;
+    get_sift_features(img1, feats1);
+    mywatch.stop_clock();
+    loginfo("img1 feats num: %d", feats1.size());
+    loginfo("img1 time cost: %fs, frame rate: %f.", mywatch.get_duration(), 1 / mywatch.get_duration());
+    draw_key_points(img1, feats1);
+    draw_sift_features(img1, feats1);
+    show_image(img1, "img1");
 
     wait_key();
     close_all();

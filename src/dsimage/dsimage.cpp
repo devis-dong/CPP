@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:59
- * @LastEditTime: 2021-07-23 00:00:02
+ * @LastEditTime: 2021-07-23 01:30:01
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.cpp
@@ -691,7 +691,7 @@ namespace ds
         Image gimg;
         cvmat2img(mat, gimg);
         return gimg;
-        // Image ker = generate_gaussian_mat(ker_shape, sigma, true);
+        // Image ker = generate_gaussian_mat(ker_shape, sigma, false);
         // int step[3] = {1, 1, 1};
         // int pad_size[3] = {int(0.5*((img._h-1)*step[0]+ker_shape[0]-img._h)), int(0.5*((img._w-1)*step[1]+ker_shape[1]-img._w)), int(0.5*((img._c-1)*step[2]+ker_shape[2]-img._c))};
         // return convolve(img, ker, step, pad_size);

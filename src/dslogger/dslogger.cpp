@@ -1,10 +1,10 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-13 15:30:20
- * @LastEditTime: 2021-07-16 15:58:36
+ * @LastEditTime: 2021-07-23 01:47:32
  * @LastEditors: devis dong
  * @Description: 
- * @FilePath: \C++\src\logger\dslogger.cpp
+ * @FilePath: \C++\src\dslogger\dslogger.cpp
  */
 
 #include <time.h>
@@ -130,19 +130,19 @@ namespace ds
     void Logger::log_info(I const string& file, I const int& line, I const char* fmt, ...)
     {
         char text[256]; format_str(text);
-        this->log(level_debug, file, line, text);
+        this->log(level_info, file, line, text);
     }
 
     void Logger::log_warning(I const string& file, I const int& line, I const char* fmt, ...)
     {
         char text[256]; format_str(text);
-        this->log(level_debug, file, line, text);
+        this->log(level_warning, file, line, text);
     }
     
     void Logger::log_error(I const string& file, I const int& line, I const char* fmt, ...)
     {
         char text[256]; format_str(text);
-        this->log(level_debug, file, line, text);
+        this->log(level_error, file, line, text);
     }
 
     string Logger::get_datetime(I const bool format)
