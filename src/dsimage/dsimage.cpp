@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:59
- * @LastEditTime: 2021-07-21 13:08:08
+ * @LastEditTime: 2021-07-23 00:00:02
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.cpp
@@ -25,57 +25,57 @@ namespace ds
         
     }
 
-    template <typename T>
-    Image<T>::Image()
+     
+    Image::Image()
     : _h(0), _w(0), _c(0), _len(0), _data(nullptr)
     {
     }
 
-    template <typename T>
-    Image<T>::Image(I const int h, I const int w, I const int c)
+    Image::Image(I const int h, I const int w, I const int c)
     : _h(h), _w(w), _c(c), _len(h * w * c)
     {
-        _data = new T[_len];
+        _data = new double[_len];
         assert (_data != nullptr);
-        memset(_data, 0, _len*sizeof(T));
+        memset(_data, 0, _len*sizeof(double));
     }
 
-    template <typename T>
-    Image<T>::Image(I const int h, I const int w, I const int c, I const T val)
+     
+    Image::Image(I const int h, I const int w, I const int c, I const double val)
     : _h(h), _w(w), _c(c), _len(h * w * c)
     {
-        _data = new T[_len];
+        _data = new double[_len];
         assert (_data != nullptr);
         for(int i = 0; i < _len; ++i) _data[i] = val;
     }
 
-    template <typename T>
-    Image<T>::Image(I const string& filepath, I const int flag)
+     
+    Image::Image(I const string& filepath, I const int flag)
     {
         cv::Mat cvimg = cv::imread(filepath, flag);
+        // cv::Mat cvimg;
+        // img.convertTo(cvimg, CV_64FC(img.channels()));
         assert (!cvimg.empty());
         init();
         _h = cvimg.rows; _w = cvimg.cols; _c = cvimg.channels();
         _len = _h*_w*_c;
-        _data = new T[_len];
+        _data = new double[_len];
         assert (_data != nullptr);
-        if(typeid(uchar) == typeid(T)) memcpy(_data, cvimg.data, _len);
-        else for(int i = 0; i < _len; ++i) _data[i] = (T)cvimg.data[i];
+        for(int i = 0; i < _len; ++i) _data[i] = (double)(cvimg.data[i]/255.0);
     }
 
-    template <typename T>
-    void Image<T>::init()
+     
+    void Image::init(I const int h, I const int w, I const int c, I double* data)
     {
-        _data = nullptr;
-        _len = 0;
-        _h = 0;
-        _w = 0;
-        _c = 0;
+        _h = h;
+        _w = w;
+        _c = c;
+        _len = _h*_w*_c;
+        _data = data;
 
     }
 
-    template <typename T>
-    void Image<T>::deinit()
+     
+    void Image::deinit()
     {
         _h = 0;
         _w = 0;
@@ -88,48 +88,48 @@ namespace ds
         }
     }
 
-    template <typename T>
-    Image<T>::Image(I const Image<T>& obj)
+     
+    Image::Image(I const Image& obj)
     {
         init();
         _len = obj._len;
         _h = obj._h; _w = obj._w; _c = obj._c;
-        _data = new T[_len];
+        _data = new double[_len];
         assert (_data != nullptr);
-        memcpy(_data, obj._data, _len*sizeof(T));
+        memcpy(_data, obj._data, _len*sizeof(double));
     }
 
-    template <typename T>
-    Image<T>::~Image()
+     
+    Image::~Image()
     {
         deinit();
     }
 
-    template <typename T>
-    Image<T>& Image<T>::operator=(I const Image<T>& obj)
+     
+    Image& Image::operator=(I const Image& obj)
     {
-        if(this == &obj) return *this;
+        // if(this == &obj) return *this;
         deinit();
         _len = obj._len;
         _h = obj._h; _w = obj._w; _c = obj._c;
-        _data = new T[_len];
+        _data = new double[_len];
         assert (_data != nullptr);
-        memcpy(_data, obj._data, _len*sizeof(T));
+        memcpy(_data, obj._data, _len*sizeof(double));
         return *this;
     }
 
-    template <typename T>
-    T& Image<T>::at(I const unsigned int y, I const unsigned int x, I const unsigned int z)
+     
+    double& Image::at(I const unsigned int y, I const unsigned int x, I const unsigned int z)
     {
         return _data[y*_w*_c + x*_c + z];
     }
 
-    // template <typename T>
-    // Image<T> Image<T>::subimage(I const PixelPos& start, I const PixelPos& end)
+    //  
+    // Image Image::subimage(I const PixelPos& start, I const PixelPos& end)
     // {
     //     PixelPos minpos(min(start._y, end._y), min(start._x, end._x), min(start._z, end._z));
     //     PixelPos maxpos(max(start._y, end._y), max(start._x, end._x), max(start._z, end._z));
-    //     Image<T> subimg(maxpos._y-minpos._y, maxpos._x-minpos._x, maxpos._z-minpos._z);
+    //     Image subimg(maxpos._y-minpos._y, maxpos._x-minpos._x, maxpos._z-minpos._z);
     //     for(int i = 0, j = minpos._y*_w*_c + minpos._x*_c + minpos._z, y = minpos._y; y <= maxpos._y; ++y, j += _w*_c)
     //     {
     //         for(int x = minpos._x; x <= maxpos._x; ++x, j += _c)
@@ -143,10 +143,10 @@ namespace ds
     //     return subimg;
     // }
 
-    // template <typename T>
-    // Image<T> Image<T>::subimage(I const PixelPos& start, I const PixelPos& len)
+    //  
+    // Image Image::subimage(I const PixelPos& start, I const PixelPos& len)
     // {
-    //     Image<T> subimg(len._y, len._x, len._z);
+    //     Image subimg(len._y, len._x, len._z);
     //     for(int i = 0, j = start._y*_w*_c + start._x*_c + start._z, y = 0; y < len._y; ++y, j += _w*_c)
     //     {
     //         for(int x = 0; x < len._x; ++x, j += _c)
@@ -160,10 +160,10 @@ namespace ds
     //     return subimg;
     // }
 
-    template <typename T>
-    Image<T> Image<T>::subimage(I const int start[3], I const int len[3])
+     
+    Image Image::subimage(I const int start[3], I const int len[3])
     {
-        Image<T> subimg(len[0], len[1], len[2]);
+        Image subimg(len[0], len[1], len[2]);
         for(int y = 0, i = 0, j0 = start[0]*_w*_c+start[1]*_c+start[2]; y < len[0]; ++y, j0 += _w*_c)
         {
             for(int x = 0, j1 = j0; x < len[1]; ++x, j1 += _c)
@@ -177,36 +177,36 @@ namespace ds
         return subimg;
     }
 
-    template <typename T>
-    void Image<T>::resize(I const int h, I const int w, I const int c)
+     
+    void Image::resize(I const int h, I const int w, I const int c)
     {
         
     }
 
-    template <typename T>
-    void Image<T>::reset(I const int h, I const int w, I const int c)
+     
+    void Image::reset(I const int h, I const int w, I const int c)
     {
         deinit();
         _h = h; _w = w; _c = c; _len = h*w*c;
-        _data = new T[_len];
+        _data = new double[_len];
         assert (nullptr != _data);
-        memset(_data, 0, _len*sizeof(T));
+        memset(_data, 0, _len*sizeof(double));
     }
 
-    template <typename T>
-    void Image<T>::reset(I const int h, I const int w, I const int c, I const T val)
+     
+    void Image::reset(I const int h, I const int w, I const int c, I const double val)
     {
         deinit();
         _h = h; _w = w; _c = c; _len = h*w*c;
-        _data = new T[_len];
+        _data = new double[_len];
         assert (nullptr != _data);
         for(int i = 0; i < _len; ++i) _data[i] = val;
     }
 
-    template <typename T>
-    T Image<T>::get_sum()
+     
+    double Image::get_sum()
     {
-        T sum = 0;
+        double sum = 0;
         for(int i = 0; i < _len; ++i)
         {
             sum += _data[i];
@@ -214,8 +214,8 @@ namespace ds
         return sum;
     }
 
-    template <typename T>
-    Image<T>& Image<T>::operator+=(I const Image<T>& img0)
+     
+    Image& Image::operator+=(I const Image& img0)
     {
         assert (_h == img0._h && _w == img0._w && _c == img0._c);
         for(int i = 0; i < _len; ++i)
@@ -225,8 +225,8 @@ namespace ds
         return *this;
     }
 
-    template <typename T>
-    Image<T>& Image<T>::operator+=(I const T a)
+     
+    Image& Image::operator+=(I const double a)
     {
         for(int i = 0; i < _len; ++i)
         {
@@ -235,8 +235,8 @@ namespace ds
         return *this;
     }
 
-    template <typename T>
-    Image<T>& Image<T>::operator-=(I const Image<T>& img0)
+     
+    Image& Image::operator-=(I const Image& img0)
     {
         assert (_h == img0._h && _w == img0._w && _c == img0._c);
         for(int i = 0; i < _len; ++i)
@@ -246,8 +246,8 @@ namespace ds
         return *this;
     }
 
-    template <typename T>
-    Image<T>& Image<T>::operator-=(I const T a)
+     
+    Image& Image::operator-=(I const double a)
     {
         for(int i = 0; i < _len; ++i)
         {
@@ -256,8 +256,8 @@ namespace ds
         return *this;
     }
 
-    template <typename T>
-    Image<T>& Image<T>::operator*=(I const Image<T>& img0)
+     
+    Image& Image::operator*=(I const Image& img0)
     {
         assert (_h == img0._h && _w == img0._w && _c == img0._c);
         for(int i = 0; i < _len; ++i)
@@ -267,8 +267,8 @@ namespace ds
         return *this;
     }
 
-    template <typename T>
-    Image<T>& Image<T>::operator*=(I const T a)
+     
+    Image& Image::operator*=(I const double a)
     {
         for(int i = 0; i < _len; ++i)
         {
@@ -277,8 +277,8 @@ namespace ds
         return *this;
     }
 
-    template <typename T>
-    Image<T>& Image<T>::operator/=(I const Image<T>& img0)
+     
+    Image& Image::operator/=(I const Image& img0)
     {
         assert (_h == img0._h && _w == img0._w && _c == img0._c);
         for(int i = 0; i < _len; ++i)
@@ -288,8 +288,8 @@ namespace ds
         return *this;
     }
 
-    template <typename T>
-    Image<T>& Image<T>::operator/=(I const T a)
+     
+    Image& Image::operator/=(I const double a)
     {
         for(int i = 0; i < _len; ++i)
         {
@@ -298,31 +298,15 @@ namespace ds
         return *this;
     }
 
-    template <typename T>
-    void show_image(I Image<T>& img, I string winname)
+     
+    void show_image(I Image& img, I string winname)
     {
-        uchar* data = nullptr;
-        if(typeid(T) != typeid(uchar))
+        cv::Mat cvimg(img._h, img._w, CV_8UC(img._c));
+        for(int i = 0; i < img._len; ++i)
         {
-            data = new uchar[img._len];
-            assert (nullptr != data);
-            for(int i = 0; i < img._len; ++i)
-            {
-                data[i] = (uchar)img._data[i];
-            }
-            cv::Mat cvimg(img._h, img._w, CV_8UC(img._c), data);
-            cv::imshow(winname, cvimg);
+            cvimg.data[i] = img._data[i]*255.0;
         }
-        else
-        {
-            cv::Mat cvimg(img._h, img._w, CV_8UC(img._c), img._data);
-            cv::imshow(winname, cvimg);
-        }
-
-        if(nullptr != data)
-        {
-            delete[] data;
-        }
+        cv::imshow(winname, cvimg);
     }
 
     void wait_key(I const int delay)
@@ -340,8 +324,8 @@ namespace ds
         cv::destroyAllWindows();
     }
 
-    template <typename T>
-    void print_image(I Image<T>& img)
+     
+    void print_image(I Image& img)
     {
         cout<<"["<<endl;
         for(int y = 0, i = 0; y < img._h; ++y)
@@ -361,10 +345,50 @@ namespace ds
         cout<<"]"<<endl;
     }
 
-    template <typename T>
-    Image<T> operator+(I const Image<T>& img0, I const Image<T>& img1)
+     
+    Image bgr2gray(I Image& bgr_img)
     {
-        Image<T> img_prime(img0);
+        if(bgr_img._len <= 0 || 1 == bgr_img._c) return bgr_img;
+        assert (3 == bgr_img._c);
+        Image gray_img(bgr_img._h, bgr_img._w, 1);
+        for(int y = 0, i = 0, j = 0; i < gray_img._h; ++y)
+        {
+            for(int x = 0; x < gray_img._w; ++x)
+            {
+                double sum = 0;
+                double b = bgr_img._data[i++]/255.0;
+                double g = bgr_img._data[i++]/255.0;
+                double r = bgr_img._data[i++]/255.0;
+                // gray_img._data[j++] =  r*0.299 +  g*0.587 +  b*0.114;
+                gray_img._data[j++] =  (r + g + b)/3.0;
+            }
+        }
+        return gray_img;
+    }
+
+     
+    int bgr2gray(I Image& bgr_img, O Image& gray_img)
+    {
+        if(3 != bgr_img._c) return -1;
+        gray_img.reset(bgr_img._h, bgr_img._w, 1);
+        for(int y = 0, i = 0, j = 0; y < gray_img._h; ++y)
+        {
+            for(int x = 0; x < gray_img._w; ++x)
+            {
+                double b = bgr_img._data[i++];
+                double g = bgr_img._data[i++];
+                double r = bgr_img._data[i++];
+                gray_img._data[j++] =  r*0.299 +  g*0.587 +  b*0.114;
+                // gray_img._data[j++] =  (r + g + b)/3.0;
+            }
+        }
+        return 0;
+    }
+
+     
+    Image operator+(I const Image& img0, I const Image& img1)
+    {
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] += img1._data[i];
@@ -372,10 +396,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator+(I const Image<T>& img0, I const T a)
+     
+    Image operator+(I const Image& img0, I const double a)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] += a;
@@ -383,10 +407,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator+(I const T a, I const Image<T>& img0)
+     
+    Image operator+(I const double a, I const Image& img0)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] += a;
@@ -394,10 +418,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator-(I const Image<T>& img0, I const Image<T>& img1)
+     
+    Image operator-(I const Image& img0, I const Image& img1)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] -= img1._data[i];
@@ -405,10 +429,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator-(I const Image<T>& img0, I const T a)
+     
+    Image operator-(I const Image& img0, I const double a)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] -= a;
@@ -416,10 +440,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator-(I const T a, I const Image<T>& img0)
+     
+    Image operator-(I const double a, I const Image& img0)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] = a - img_prime._data[i];
@@ -427,10 +451,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator*(I const Image<T>& img0, I const Image<T>& img1)
+     
+    Image operator*(I const Image& img0, I const Image& img1)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] *= img1._data[i];
@@ -438,10 +462,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator*(I const Image<T>& img0, I const T a)
+     
+    Image operator*(I const Image& img0, I const double a)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] *= a;
@@ -449,10 +473,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator*(I const T a, I const Image<T>& img0)
+     
+    Image operator*(I const double a, I const Image& img0)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] *= a;
@@ -460,10 +484,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator/(I const Image<T>& img0, I const Image<T>& img1)
+     
+    Image operator/(I const Image& img0, I const Image& img1)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] /= img1._data[i];
@@ -471,10 +495,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator/(I const Image<T>& img0, I const T a)
+     
+    Image operator/(I const Image& img0, I const double a)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] /= a;
@@ -482,10 +506,10 @@ namespace ds
         return img_prime;
     }
 
-    template <typename T>
-    Image<T> operator/(I const T a, I const Image<T>& img0)
+     
+    Image operator/(I const double a, I const Image& img0)
     {
-        Image<T> img_prime(img0);
+        Image img_prime(img0);
         for(int i = 0; i < img_prime._len; ++i)
         {
             img_prime._data[i] = a / img_prime._data[i];
@@ -493,10 +517,9 @@ namespace ds
         return img_prime;
     }
 
-    template <typename U, typename V, typename T>
-    T sumproduct(I Image<U>& img, I Image<V>& ker, I const int offset[3])
+    double sumproduct(I Image& img, I Image& ker, I const int offset[3])
     {
-        T sum = 0;
+        double sum = 0;
         int offset_img[3] = {offset[0] > 0 ? offset[0] : 0, offset[1] > 0 ? offset[1] : 0, offset[2] > 0 ? offset[2] : 0};
         int offset_ker[3] = {offset[0] < 0 ? -offset[0] : 0, offset[1] < 0 ? -offset[1] : 0, offset[2] < 0 ? -offset[2] : 0};
         int iy = 0, ix = 0, iz = 0, ky = 0, kx = 0, kz = 0, i = 0, k = 0, i1 = 0, k1 = 0;
@@ -515,13 +538,12 @@ namespace ds
         return sum;
     }
 
-    template<typename U, typename V, typename T>
-    Image<T> convolve(I Image<U>& img, I Image<V>& ker, I const int step[3], I const int pad_size[3])
+    Image convolve(I Image& img, I Image& ker, I const int step[3], I const int pad_size[3])
     {
         int con_shape[3] = {(img._h+2*pad_size[0]-ker._h)/step[0]+1, (img._w+2*pad_size[1]-ker._w)/step[1]+1, (img._c+2*pad_size[2]-ker._c)/step[2]+1};
         int start[3] = {-pad_size[0], -pad_size[1], -pad_size[2]};
         int end[3] = {start[0] + con_shape[0], start[1] + con_shape[1], start[2] + con_shape[2]};
-        Image<T> con(con_shape[0], con_shape[1], con_shape[2]);
+        Image con(con_shape[0], con_shape[1], con_shape[2]);
         int offset[3] = {0}, i = 0;
         for(offset[0] = start[0]; offset[0] < end[0]; offset[0] += step[0])
         {
@@ -529,15 +551,14 @@ namespace ds
             {
                 for(offset[2] = start[2]; offset[2] < end[2]; offset[2] += step[2])
                 {
-                    con._data[i++] = sumproduct<U, V, T>(img, ker, offset);
+                    con._data[i++] = sumproduct(img, ker, offset);
                 }
             }
         }
         return con;
     }
 
-    template <typename U, typename V, typename T>
-    void convolve(I Image<U>& img, I Image<V>& ker, I const int step[3], I O Image<T>& con)
+    void convolve(I Image& img, I Image& ker, I const int step[3], I O Image& con)
     {
         int max_offset[3] = {img._h - ker._h, img._w - ker._w, img._c - ker._c};
         int offset[3] = {0, 0, 0}, i = 0;
@@ -548,42 +569,83 @@ namespace ds
             {
                 for(offset[2] = 0; offset[2] <= max_offset[2]; offset[2] += step[2])
                 {
-                    con._data[i++] = sumproduct<U, V, T>(img, ker, offset);
+                    con._data[i++] = sumproduct(img, ker, offset);
                 }
             }
         }
     }
 
-    template <typename T>
-    Image<T> sample_image(I Image<T>& img, I const double rate[3])
+     
+    double linear_interp_val(I Image& img, I const double y, I const double x, I const double z)
     {
-        Image<T> sampleimg(img._h*rate[0], img._w*rate[1], img._c*rate[2]);
-        double r[3] = {double(sampleimg._h)/double(img._h), double(sampleimg._w)/double(img._w), double(sampleimg._c)/double(img._c)};
-        for(int y = 0, i = 0, j0 = 0; y < sampleimg._h; ++y, j0 = int(y/r[0])*img._w*img._c)
+        int y0 = floor(y), x0 = floor(x), z0 = floor(z);
+        double dy = y-y0, dx = x-x0, dz = z-z0;
+        double val = 0.0;
+        int i, j, k, yt, xt, zt;
+        double v_y, v_x, v_z;
+        for(i = 0; i <= 1; ++i)
         {
-            for(int x = 0, j1 = j0; x < sampleimg._w; ++x, j1 = j0+int(x/r[1])*img._c)
+            yt = y0 + i;
+            if(0 <= yt && yt < img._h)
             {
-                for(int z = 0, j = j1; z < sampleimg._c; ++z, ++i, j = j1 + int(z/r[2]))
+                v_y = ( (i == 0)? 1.0 - dy : dy );
+                for(j = 0; j <= 1; ++j)
                 {
-                    sampleimg._data[i] = img._data[j];
+                    xt = x0 + j;
+                    if(0 <= xt && xt < img._w)
+                    {
+                        v_x = v_y * ( (j == 0)? 1.0 - dx : dx );
+                        for(k = 0; k <= 1; ++k)
+                        {
+                            zt = z0 + k;
+                            if(0 <= zt && zt < img._c)
+                            {
+                                v_z = v_x * ( ( k == 0 )? 1.0 - dz : dz );
+                                val += img.at(yt, xt, zt) * v_z;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return val;
+    }
+
+     
+    Image sample_image(I Image& img, I const double rate[3])
+    {
+        Image sampleimg(int(img._h*rate[0]), int(img._w*rate[1]), int(img._c*rate[2]));
+        double r[3] = {double(sampleimg._h)/double(img._h), double(sampleimg._w)/double(img._w), double(sampleimg._c)/double(img._c)};
+        double y_prime, x_prime, z_prime;
+        int y, x, z, i;
+        for(y = 0, i = 0; y < sampleimg._h; ++y)
+        {
+            y_prime = double(y) / r[0];
+            for(x = 0; x < sampleimg._w; ++x)
+            {
+                x_prime = double(x) / r[1];
+                for(z = 0; z < sampleimg._c; ++z)
+                {
+                    z_prime = double(z) / r[2];
+                    sampleimg._data[i++] = linear_interp_val(img, y_prime, x_prime, z_prime);
                 }
             }
         }
         return sampleimg;
     }
 
-    template <typename T>
-    Image<T> generate_gaussian_mat(I const int shape[3], I const double sigma, I const bool norm)
+     
+    Image generate_gaussian_mat(I const int shape[3], I const double sigma, I const bool norm)
     {
-        Image<T> g_mat(shape[0], shape[1], shape[2]);
-        T A = 0.5/(PI*sigma*sigma);
+        Image g_mat(shape[0], shape[1], shape[2]);
+        double A = 0.5/(PI*sigma*sigma);
         double o[3] = {(g_mat._h-1)/2.0, (g_mat._w-1)/2.0, (g_mat._c-1)/2.0};
         int y = 0, x = 0, z = 0, i = 0;
         for(y = 0; y < g_mat._h; ++y)
         {
             for(x = 0; x < g_mat._w; ++x)
             {
-                T val = A * exp(-0.5*((y-o[0])*(y-o[0]) + (x-o[1])*(x-o[1]))/(sigma*sigma));
+                double val = A * exp(-0.5*((y-o[0])*(y-o[0]) + (x-o[1])*(x-o[1]))/(sigma*sigma));
                 for(z = 0; z < g_mat._c; ++z)
                 {
                     g_mat._data[i++] = val;
@@ -594,13 +656,45 @@ namespace ds
         return g_mat;
     }
 
-    template <typename T>
-    Image<T> gaussian_blur(I Image<T>& img, I const int ker_shape[3], I const double sigma)
+    void img2cvmat(I Image& img, O cv::Mat& mat)
     {
-        Image<double> ker = generate_gaussian_mat<double>(ker_shape, sigma, true);
-        int step[3] = {1, 1, 1};
-        int pad_size[3] = {int(0.5*((img._h-1)*step[0]+ker_shape[0]-img._h)), int(0.5*((img._w-1)*step[1]+ker_shape[1]-img._w)), int(0.5*((img._c-1)*step[2]+ker_shape[2]-img._c))};
-        return convolve<T, double, T>(img, ker, step, pad_size);
+        if(mat.empty())
+        {
+            mat.create(img._h, img._w, CV_8UC(img._c));
+        }
+        for(int i = 0; i < img._len; ++i)
+        {
+            mat.data[i] = img._data[i]*255.0;
+        }
+    }
+
+ 
+    void cvmat2img(I cv::Mat& mat, O Image& img)
+    {
+        // cv::Mat fmat;
+        mat.convertTo(mat, CV_8UC(mat.channels()));
+        img.reset(mat.rows, mat.cols, mat.channels());
+        for(int i = 0; i < img._len; ++i)
+        {
+            img._data[i] = mat.data[i]/255.0;
+        }
+    }
+
+     
+    Image gaussian_blur(I Image& img, I const int ker_shape[3], I const double sigma)
+    {
+        cv::Mat mat;
+        img2cvmat(img, mat);
+        if(3 == mat.channels()) cv::cvtColor(mat, mat, cv::COLOR_BGR2GRAY);
+        mat.convertTo(mat, CV_64F);
+        GaussianBlur(mat, mat, cv::Size(0,0), sigma, sigma);
+        Image gimg;
+        cvmat2img(mat, gimg);
+        return gimg;
+        // Image ker = generate_gaussian_mat(ker_shape, sigma, true);
+        // int step[3] = {1, 1, 1};
+        // int pad_size[3] = {int(0.5*((img._h-1)*step[0]+ker_shape[0]-img._h)), int(0.5*((img._w-1)*step[1]+ker_shape[1]-img._w)), int(0.5*((img._c-1)*step[2]+ker_shape[2]-img._c))};
+        // return convolve(img, ker, step, pad_size);
     }
 
 

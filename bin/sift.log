@@ -1,0 +1,1024 @@
+2021-07-22 13:28:20 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722132821 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722132821 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722132821 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722132821 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722132821 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722132823 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 13:28:54 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722132854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722132854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722132854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722132854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722132855 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722132856 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 13:37:03 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722133704 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722133704 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722133704 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722133704 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722133704 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722133706 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 13:37:31 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722133731 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722133732 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722133732 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722133732 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722133732 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722133733 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 13:39:20 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722133920 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722133920 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722133920 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722133920 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722133920 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722133922 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 13:40:11 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722134011 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722134011 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722134011 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722134011 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722134012 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722134013 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 13:41:18 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722134118 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722134119 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722134119 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722134119 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722134119 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722134120 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 13:41:44 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722134144 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722134144 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722134144 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722134144 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722134144 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722134146 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 13:42:55 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722134256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722134256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722134256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+2021-07-22 14:48:51 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722144851 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722144852 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722144852 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722144855 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722144855 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722144855 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 14:49:15 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722144916 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(20): step 1: building gaussian pyramid.
+20210722144916 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(28): step 2: building difference of gaussian pyramid.
+20210722144916 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 3: detect the local extrema of the dog.
+20210722144916 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(40): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722144916 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 5: generate descriptor for each keypoint.
+20210722144916 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(46): sift done.
+2021-07-22 14:55:51 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(22): step 1: building gaussian pyramid.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(31): step 1 time cost: 0.377148s.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 2: building difference of gaussian pyramid.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(41): step 2 time cost: 0.015801s.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 3: detect the local extrema of the dog.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(49): step 3 time cost: 0.015628s.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(51): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(55): step 4 time cost: 0.000000s.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(57): step 5: generate descriptor for each keypoint.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(61): step 5 time cost: 0.000000s.
+20210722145551 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(63): sift done.
+2021-07-22 14:58:54 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722145854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(22): step 1: building gaussian pyramid.
+20210722145854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(31): step 1 time cost: 0.375035s.
+20210722145854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 2: building difference of gaussian pyramid.
+20210722145854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(41): step 2 time cost: 0.000000s.
+20210722145854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 3: detect the local extrema of the dog.
+20210722150047 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(49): step 3 time cost: 112.968996s.
+20210722150047 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(51): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722150047 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(55): step 4 time cost: 0.000000s.
+20210722150047 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(57): step 5: generate descriptor for each keypoint.
+20210722150047 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(61): step 5 time cost: 0.000000s.
+20210722150047 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(63): sift done.
+2021-07-22 15:01:03 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722150103 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(22): step 1: building gaussian pyramid.
+20210722150103 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(31): step 1 time cost: 0.374739s.
+20210722150103 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 2: building difference of gaussian pyramid.
+20210722150103 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(41): step 2 time cost: 0.015613s.
+20210722150103 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 3: detect the local extrema of the dog.
+20210722150108 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(49): step 3 time cost: 4.923215s.
+20210722150108 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(51): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722150108 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(55): step 4 time cost: 0.000000s.
+20210722150108 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(57): step 5: generate descriptor for each keypoint.
+20210722150108 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(61): step 5 time cost: 0.000000s.
+20210722150108 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(63): sift done.
+2021-07-22 15:01:51 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(22): step 1: building gaussian pyramid.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(31): step 1 time cost: 0.387392s.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 2: building difference of gaussian pyramid.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(41): step 2 time cost: 0.015628s.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 3: detect the local extrema of the dog.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(49): step 3 time cost: 0.015503s.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(51): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(55): step 4 time cost: 0.000000s.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(57): step 5: generate descriptor for each keypoint.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(61): step 5 time cost: 0.000000s.
+20210722150152 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(63): sift done.
+2021-07-22 15:03:28 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(22): step 1: building gaussian pyramid.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(31): step 1 time cost: 0.373676s.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 2: building difference of gaussian pyramid.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(41): step 2 time cost: 0.000000s.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 3: detect the local extrema of the dog.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(49): step 3 time cost: 0.000000s.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(51): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(55): step 4 time cost: 0.000000s.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(57): step 5: generate descriptor for each keypoint.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(61): step 5 time cost: 0.000000s.
+20210722150328 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(63): sift done.
+2021-07-22 16:38:58 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(22): step 1: building gaussian pyramid.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(31): step 1 time cost: 0.374707s.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 2: building difference of gaussian pyramid.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(41): step 2 time cost: 0.000000s.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 3: detect the local extrema of the dog.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(49): step 3 time cost: 0.000000s.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(51): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(55): step 4 time cost: 0.000000s.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(57): step 5: generate descriptor for each keypoint.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(61): step 5 time cost: 0.000000s.
+20210722163859 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(63): sift done.
+2021-07-22 17:30:51 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722173051 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.378434s.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.000000s.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.008989s.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.000000s.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.000000s.
+20210722173052 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+2021-07-22 17:31:08 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.382728s.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.000000s.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.000000s.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.000000s.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.000000s.
+20210722173109 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+2021-07-22 17:35:26 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722173527 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 1.530191s.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.015643s.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.000000s.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.000000s.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.000000s.
+20210722173528 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+2021-07-22 17:36:02 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722173602 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 1.515480s.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.015648s.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.046865s.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.000000s.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.000000s.
+20210722173604 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+2021-07-22 18:25:33 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722182534 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722182538 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722182540 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722182540 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(68): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722182540 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(72): step 5: generate descriptor for each keypoint.
+2021-07-22 18:30:19 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722183019 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722183020 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722183021 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722183022 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722183022 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 0
+20210722183022 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints and assign oritentation for each of them.
+20210722183022 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722183022 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 0
+20210722183022 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 2.499495s, frame rate: 0.400081.
+20210722183112 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 18:31:53 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722183153 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722183154 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722183156 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722183156 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722183401 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 0
+20210722183401 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722183401 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722183401 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 0
+20210722183401 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 127.966499s, frame rate: 0.007815.
+20210722183427 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 18:41:52 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722184152 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722184152 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722184154 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722184155 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722184203 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 3
+20210722184203 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722184203 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722184203 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 4
+20210722184203 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 10.749109s, frame rate: 0.093031.
+20210722184237 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 18:49:12 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722184912 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722184912 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722184914 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722184914 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722184914 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 3
+20210722184914 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722184914 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722184915 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 4
+20210722184915 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 2.524924s, frame rate: 0.396052.
+20210722184933 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 18:52:25 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722185225 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722185226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722185227 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722185227 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722185227 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 3
+20210722185227 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722185227 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722185227 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 4
+20210722185227 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.913412s, frame rate: 0.522627.
+20210722185237 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 18:53:18 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722185319 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722185319 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722185320 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722185321 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722185321 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 3
+20210722185321 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722185321 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722185321 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 4
+20210722185321 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.897154s, frame rate: 0.527105.
+20210722185337 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 18:56:34 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722185634 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722185635 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722185636 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722185636 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722185636 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 2
+20210722185636 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722185636 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722185636 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 2
+20210722185636 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.893890s, frame rate: 0.528014.
+20210722185647 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 19:15:44 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722191544 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722191544 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722191546 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722191546 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722191546 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 0
+20210722191546 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722191546 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722191546 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 0
+20210722191546 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.885588s, frame rate: 0.530339.
+20210722191615 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 19:20:40 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722192040 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722192040 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722192042 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722192042 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722192042 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 0
+20210722192042 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722192042 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722192042 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 0
+20210722192042 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.895384s, frame rate: 0.527598.
+20210722192102 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 19:25:33 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722192533 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722192533 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722192535 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722192535 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722192535 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 0
+20210722192535 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722192535 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722192535 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 0
+20210722192535 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.860795s, frame rate: 0.537405.
+20210722192544 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 19:31:15 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722193115 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722193115 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722193117 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722193117 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722193117 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 0
+20210722193117 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722193117 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722193117 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 0
+20210722193117 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.824295s, frame rate: 0.548157.
+20210722193126 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 19:36:38 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722193638 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722193639 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722193640 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722193640 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722193640 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 0
+20210722193640 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722193640 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722193640 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 0
+20210722193640 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.833148s, frame rate: 0.545510.
+20210722193646 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 20:12:57 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722201257 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+20210722201259 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1219): step 2: building difference of gaussian pyramid.
+2021-07-22 20:16:08 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-22 20:20:24 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-22 20:22:58 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-22 20:24:04 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-22 20:25:00 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-22 20:26:08 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-22 20:26:55 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-22 20:29:02 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722202903 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+20210722202904 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1219): step 2: building difference of gaussian pyramid.
+2021-07-22 20:30:40 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722203040 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+20210722203042 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1219): step 2: building difference of gaussian pyramid.
+2021-07-22 20:40:48 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722204048 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+2021-07-22 20:41:47 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-22 21:01:48 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722210148 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1220): step 2: building difference of gaussian pyramid.
+2021-07-22 21:05:48 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-22 21:06:50 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722210650 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+2021-07-22 21:08:12 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722210813 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+2021-07-22 21:08:40 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722210840 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+2021-07-22 21:09:20 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722210920 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+2021-07-22 21:43:48 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722214348 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+2021-07-22 21:44:09 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722214409 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722214410 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722214411 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722214411 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722214411 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 0
+20210722214411 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722214411 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722214411 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 0
+20210722214411 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.820617s, frame rate: 0.549264.
+20210722214416 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 21:44:31 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722214431 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722214431 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(29): step 1: building gaussian pyramid.
+20210722214433 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(46): step 2: building difference of gaussian pyramid.
+20210722214433 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(62): step 3: detect the local extrema of the dog.
+20210722214433 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): local extema num: 0
+20210722214433 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(69): step 4: intially generate keypoints.
+20210722214433 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): step 5: generate descriptor for each keypoint.
+20210722214433 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): feats num: 0
+20210722214433 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): time cost: 1.841350s, frame rate: 0.543080.
+20210722214437 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(87): ...done.
+
+2021-07-22 21:47:16 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722214716 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722214717 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(86): time cost: 0.134764s, frame rate: 7.420379.
+20210722214719 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(90): ...done.
+
+2021-07-22 21:52:59 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722215300 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722215300 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(88): time cost: 0.070193s, frame rate: 14.246435.
+20210722215307 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): ...done.
+
+2021-07-22 21:58:47 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722215847 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+2021-07-22 22:01:23 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722220124 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722220127 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(88): time cost: 2.746809s, frame rate: 0.364059.
+20210722220133 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): ...done.
+
+2021-07-22 22:02:41 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722220241 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+2021-07-22 22:03:14 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722220314 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722220314 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(88): time cost: 0.021979s, frame rate: 45.497975.
+20210722220316 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): ...done.
+
+2021-07-22 22:03:33 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722220333 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722220333 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(88): time cost: 0.118811s, frame rate: 8.416729.
+20210722220336 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): ...done.
+
+2021-07-22 22:03:49 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722220349 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722220349 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(88): time cost: 0.217154s, frame rate: 4.605027.
+20210722220359 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): ...done.
+
+2021-07-22 22:04:14 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722220414 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722220415 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(88): time cost: 0.299823s, frame rate: 3.335301.
+20210722220423 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): ...done.
+
+2021-07-22 22:05:27 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722220527 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722220527 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(34): step 1: building gaussian pyramid.
+20210722220529 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(51): step 2: building difference of gaussian pyramid.
+20210722220529 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(67): step 3: detect the local extrema of the dog.
+20210722220529 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(72): local extema num: 0
+20210722220529 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(74): step 4: intially generate keypoints.
+20210722220529 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(78): step 5: generate descriptor for each keypoint.
+20210722220529 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(80): feats num: 0
+20210722220529 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(88): time cost: 1.845424s, frame rate: 0.541881.
+20210722220607 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): ...done.
+
+2021-07-22 22:15:45 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722221545 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+2021-07-22 22:18:50 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722221850 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722221850 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.009234s, frame rate: 108.295430.
+20210722221857 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:21:18 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722222118 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722222118 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.010996s, frame rate: 90.942161.
+20210722222121 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:21:32 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722222132 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+2021-07-22 22:22:07 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722222207 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722222207 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(37): step 1: building gaussian pyramid.
+20210722222207 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(54): step 2: building difference of gaussian pyramid.
+20210722222207 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(70): step 3: detect the local extrema of the dog.
+20210722222207 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): local extema num: 0
+20210722222207 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(77): step 4: intially generate keypoints.
+20210722222207 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(81): step 5: generate descriptor for each keypoint.
+20210722222207 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): feats num: 0
+20210722222207 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.147856s, frame rate: 6.763337.
+20210722222215 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:25:36 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722222536 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722222536 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(37): step 1: building gaussian pyramid.
+20210722222536 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(54): step 2: building difference of gaussian pyramid.
+20210722222536 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(70): step 3: detect the local extrema of the dog.
+20210722222537 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): local extema num: 0
+20210722222537 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(77): step 4: intially generate keypoints.
+20210722222537 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(81): step 5: generate descriptor for each keypoint.
+20210722222537 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): feats num: 0
+20210722222537 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.147358s, frame rate: 6.786194.
+20210722222542 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:28:49 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722222849 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722222849 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(37): step 1: building gaussian pyramid.
+20210722222849 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(54): step 2: building difference of gaussian pyramid.
+20210722222849 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(70): step 3: detect the local extrema of the dog.
+20210722222849 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): local extema num: 0
+20210722222849 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(77): step 4: intially generate keypoints.
+20210722222849 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(81): step 5: generate descriptor for each keypoint.
+20210722222849 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): feats num: 0
+20210722222849 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.141091s, frame rate: 7.087624.
+20210722222855 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:32:25 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722223226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722223226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(37): step 1: building gaussian pyramid.
+20210722223226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(54): step 2: building difference of gaussian pyramid.
+20210722223226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(70): step 3: detect the local extrema of the dog.
+20210722223226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): local extema num: 0
+20210722223226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(77): step 4: intially generate keypoints.
+20210722223226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(81): step 5: generate descriptor for each keypoint.
+20210722223226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): feats num: 0
+20210722223226 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.174586s, frame rate: 5.727836.
+20210722223233 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:37:12 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722223712 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722223712 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(37): step 1: building gaussian pyramid.
+20210722223713 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(54): step 2: building difference of gaussian pyramid.
+20210722223713 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(70): step 3: detect the local extrema of the dog.
+20210722223713 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): local extema num: 0
+20210722223713 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(77): step 4: intially generate keypoints.
+20210722223713 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(81): step 5: generate descriptor for each keypoint.
+20210722223713 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(83): feats num: 0
+20210722223713 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.177114s, frame rate: 5.646081.
+20210722223716 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:41:22 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722224123 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722224123 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.000000s, frame rate: inf.
+20210722224127 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:43:17 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722224317 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722224318 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.000000s, frame rate: inf.
+20210722224321 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:43:50 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722224350 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722224350 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.000000s, frame rate: inf.
+20210722224356 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:45:54 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722224554 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722224554 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.000000s, frame rate: inf.
+20210722224557 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:56:13 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722225613 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722225613 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.000000s, frame rate: inf.
+20210722225617 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 22:56:34 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722225634 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722225635 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.275098s, frame rate: 3.635068.
+20210722225646 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 23:05:48 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722230548 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722230548 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): time cost: 0.313881s, frame rate: 3.185921.
+20210722230601 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(95): ...done.
+
+2021-07-22 23:28:06 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722232806 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722232807 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(89): time cost: 0.261963s, frame rate: 3.817333.
+20210722232812 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(93): ...done.
+
+2021-07-22 23:30:27 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722233027 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722233027 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(89): time cost: 0.266834s, frame rate: 3.747648.
+20210722233030 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(93): ...done.
+
+2021-07-22 23:30:46 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722233046 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+2021-07-22 23:35:11 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722233511 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+2021-07-22 23:35:24 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722233524 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+2021-07-22 23:37:59 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722233759 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+2021-07-22 23:41:57 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722234158 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+2021-07-22 23:43:23 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722234323 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+2021-07-22 23:43:47 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722234348 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722234348 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(89): time cost: 0.082330s, frame rate: 12.146241.
+20210722234352 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(93): ...done.
+
+2021-07-22 23:45:59 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722234559 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+2021-07-22 23:46:30 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722234630 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722234631 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(89): time cost: 0.269115s, frame rate: 3.715884.
+20210722234633 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(93): ...done.
+
+2021-07-22 23:48:26 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722234826 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722234827 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(89): time cost: 0.273096s, frame rate: 3.661716.
+20210722234830 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(93): ...done.
+
+2021-07-22 23:49:10 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722234911 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722234911 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(89): time cost: 0.276683s, frame rate: 3.614244.
+20210722234917 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(93): ...done.
+
+2021-07-22 23:50:50 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722235050 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722235050 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(89): time cost: 0.288227s, frame rate: 3.469488.
+20210722235058 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(93): ...done.
+
+2021-07-22 23:52:17 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722235218 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722235218 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(35): step 1: building gaussian pyramid.
+20210722235219 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(52): step 2: building difference of gaussian pyramid.
+20210722235219 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(68): step 3: detect the local extrema of the dog.
+20210722235219 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(73): local extema num: 0
+20210722235219 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(75): step 4: intially generate keypoints.
+20210722235219 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(79): step 5: generate descriptor for each keypoint.
+20210722235220 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(81): feats num: 0
+20210722235220 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(89): time cost: 1.842550s, frame rate: 0.542726.
+20210722235225 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(93): ...done.
+
+2021-07-22 23:54:15 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722235415 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722235416 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): time cost: 0.296283s, frame rate: 3.375151.
+20210722235419 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(96): ...done.
+
+2021-07-22 23:55:38 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722235538 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722235538 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): time cost: 0.283356s, frame rate: 3.529129.
+20210722235542 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(96): ...done.
+
+2021-07-22 23:57:22 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722235722 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722235723 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): time cost: 0.282378s, frame rate: 3.541352.
+20210722235728 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(96): ...done.
+
+2021-07-22 23:57:47 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722235747 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722235748 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): time cost: 0.291302s, frame rate: 3.432863.
+20210722235753 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(96): ...done.
+
+2021-07-22 23:59:04 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210722235904 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210722235905 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(38): step 1: building gaussian pyramid.
+20210722235906 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(55): step 2: building difference of gaussian pyramid.
+20210722235906 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(71): step 3: detect the local extrema of the dog.
+20210722235906 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(76): local extema num: 2
+20210722235907 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(78): step 4: intially generate keypoints.
+20210722235907 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(82): step 5: generate descriptor for each keypoint.
+20210722235907 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(84): feats num: 2
+20210722235907 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): time cost: 1.892140s, frame rate: 0.528502.
+20210722235931 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(96): ...done.
+
+2021-07-23 00:00:11 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723000012 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210723000012 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(38): step 1: building gaussian pyramid.
+20210723000012 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(55): step 2: building difference of gaussian pyramid.
+20210723000012 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(71): step 3: detect the local extrema of the dog.
+20210723000012 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(76): local extema num: 5907
+20210723000012 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(78): step 4: intially generate keypoints.
+20210723000012 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(82): step 5: generate descriptor for each keypoint.
+20210723000015 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(84): feats num: 11415
+20210723000015 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): time cost: 3.060272s, frame rate: 0.326768.
+20210723000045 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(96): ...done.
+
+2021-07-23 00:02:40 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723000240 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210723000240 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(38): step 1: building gaussian pyramid.
+20210723000240 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(55): step 2: building difference of gaussian pyramid.
+20210723000240 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(71): step 3: detect the local extrema of the dog.
+20210723000240 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(76): local extema num: 3201
+20210723000240 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(78): step 4: intially generate keypoints.
+20210723000241 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(82): step 5: generate descriptor for each keypoint.
+20210723000242 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(84): feats num: 6372
+20210723000242 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): time cost: 1.782828s, frame rate: 0.560907.
+20210723000251 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(96): ...done.
+
+2021-07-23 00:04:03 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723000403 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210723000404 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723000404 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.083375s.
+20210723000404 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723000404 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.016108s.
+20210723000404 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723000404 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.032873s.
+20210723000404 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723000404 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.169633s.
+20210723000404 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723000405 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 1.437432s.
+20210723000405 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723000405 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): time cost: 1.801086s, frame rate: 0.555221.
+20210723000434 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(96): ...done.
+
+2021-07-23 00:07:50 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723000750 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(19): running...
+
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.071716s.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.014001s.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.019153s.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.062573s.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.452739s.
+20210723000751 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723000751 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(91): feats num: 2064
+20210723000751 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(92): time cost: 0.716546s, frame rate: 1.395584.
+20210723000803 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(96): ...done.
+
+2021-07-23 00:08:35 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723000835 [DEBUG]         E:\Coding\C++\test\dssift\test_sift.cpp(1202): step 1: building gaussian pyramid.
+2021-07-23 00:09:40 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-23 00:27:11 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-23 00:27:36 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-23 00:30:19 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+2021-07-23 00:39:01 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723003901 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723003901 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723003901 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.072902s.
+20210723003901 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723003901 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.020212s.
+20210723003901 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+2021-07-23 00:39:31 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723003931 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723003931 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723003931 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.081434s.
+20210723003931 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723003931 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.014110s.
+20210723003931 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+2021-07-23 00:43:03 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723004303 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723004303 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723004303 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.072941s.
+20210723004303 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723004303 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.007573s.
+20210723004303 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+2021-07-23 00:47:10 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723004710 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723004710 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723004710 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.071528s.
+20210723004710 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723004710 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.014003s.
+20210723004710 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723004710 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.029597s.
+20210723004710 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723004710 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.059779s.
+20210723004710 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723004711 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.499387s.
+20210723004711 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723004711 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 2012
+20210723004711 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.756625s, frame rate: 1.321659.
+20210723004711 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(108): ...done.
+
+2021-07-23 00:48:53 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723004853 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723004853 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723004853 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.071373s.
+20210723004853 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723004853 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.021769s.
+20210723004853 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723004853 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.017074s.
+20210723004853 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723004854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.017742s.
+20210723004854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723004854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.059834s.
+20210723004854 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723004854 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 286
+20210723004854 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.243491s, frame rate: 4.106928.
+20210723004908 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(110): ...done.
+
+2021-07-23 00:53:09 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723005309 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723005309 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723005309 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.073838s.
+20210723005309 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723005309 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.014020s.
+20210723005309 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723005333 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 24.017515s.
+20210723005333 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723005333 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.008990s.
+20210723005333 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723005333 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.059714s.
+20210723005333 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723005333 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 286
+20210723005333 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 24.252343s, frame rate: 0.041233.
+20210723005340 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(110): ...done.
+
+2021-07-23 00:55:12 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723005512 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.071715s.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.025476s.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.012550s.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.022226s.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.058481s.
+20210723005512 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723005512 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 286
+20210723005512 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.249626s, frame rate: 4.005993.
+20210723005518 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(110): ...done.
+
+2021-07-23 00:55:43 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723005543 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.071827s.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.014004s.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.018022s.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.012002s.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.071913s.
+20210723005544 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723005544 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 286
+20210723005544 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.247189s, frame rate: 4.045487.
+2021-07-23 00:58:12 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723005812 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723005812 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723005812 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.071203s.
+20210723005812 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723005812 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.009035s.
+20210723005812 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+2021-07-23 01:02:17 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723010217 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723010217 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723010217 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.096933s.
+20210723010217 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723010217 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.003552s.
+20210723010217 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723010217 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.016982s.
+20210723010217 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723010217 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.002089s.
+20210723010217 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723010218 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.058883s.
+20210723010218 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723010218 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 286
+20210723010218 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.452103s, frame rate: 2.211885.
+20210723010247 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(110): ...done.
+
+2021-07-23 01:02:55 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723010255 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723010255 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723010255 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.062401s.
+20210723010255 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723010255 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.000000s.
+20210723010256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723010256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.015637s.
+20210723010256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723010256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.000000s.
+20210723010256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723010256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.046891s.
+20210723010256 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723010256 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 286
+20210723010256 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.234150s, frame rate: 4.270767.
+20210723010257 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(110): ...done.
+
+2021-07-23 01:02:58 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723010258 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723010258 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723010258 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.062309s.
+20210723010258 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723010258 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.000000s.
+20210723010258 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723010258 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.015629s.
+20210723010258 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723010258 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.015623s.
+20210723010258 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723010259 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.062513s.
+20210723010259 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723010259 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 286
+20210723010259 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.233990s, frame rate: 4.273687.
+20210723010259 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(110): ...done.
+
+2021-07-23 01:03:00 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723010300 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.062517s.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.015614s.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.015644s.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.015623s.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.062493s.
+20210723010300 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723010300 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 286
+20210723010300 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.234308s, frame rate: 4.267887.
+20210723010306 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(110): ...done.
+
+2021-07-23 01:03:54 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723010354 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.079343s.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.006048s.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.020386s.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.009008s.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.046118s.
+20210723010354 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723010354 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 286
+20210723010354 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.252045s, frame rate: 3.967545.
+20210723010507 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(111): ...done.
+
+2021-07-23 01:05:45 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723010545 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.069644s.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.024957s.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.030549s.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.059807s.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.437108s.
+20210723010546 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723010546 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 2012
+20210723010546 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.679509s, frame rate: 1.471651.
+20210723010602 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(111): ...done.
+
+2021-07-23 01:06:22 ****WELCOME**** Target: [ALL]          Level: [ALL]          Path: sift.log
+20210723010622 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(21): running...
+
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(24): step 1: building gaussian pyramid.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(33): step 1 time cost: 0.078372s.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(35): step 2: building difference of gaussian pyramid.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(43): step 2 time cost: 0.004045s.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(45): step 3: detect the local extrema of the dog.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(52): step 3 time cost: 0.029006s.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(54): step 4: intially generate keypoints and assign oritentation for each of them.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(58): step 4 time cost: 0.031766s.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(60): step 5: generate descriptor for each keypoint.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(64): step 5 time cost: 0.144899s.
+20210723010622 [DEBUG]         E:\Coding\C++/src/dssift/dssift.cpp(66): sift done.
+20210723010622 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(103): feats num: 680
+20210723010622 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(104): time cost: 0.361483s, frame rate: 2.766382.
+20210723010635 [DEBUG]         E:\Coding\C++\test\dssift\test_dssift.cpp(111): ...done.
+

@@ -182,6 +182,7 @@
                 "-o", "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
                 "-I", "${workspaceFolder}/src/common",
                 "-I", "${workspaceFolder}/src/dswatch",
+                "-I", "${workspaceFolder}/src/dslogger",
                 "-I", "${workspaceFolder}/src/dsimage",
                 "-I", "${workspaceFolder}/src/dssift",
                 "-I", "${workspaceFolder}/inc",
@@ -194,6 +195,7 @@
                 "-l", "opencv_imgproc3413.dll",
                 "-l", "opencv_core3413.dll",
                 "-l", "dswatch.dll",
+                "-l", "dslogger.dll",
             ],
         },
         {
