@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-21 13:05:23
- * @LastEditTime: 2021-07-23 11:49:05
+ * @LastEditTime: 2021-07-23 16:06:12
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dssift\dssift.cpp
@@ -352,8 +352,8 @@ namespace ds
         for(int i = 0; i < keypoints.size(); ++i)
         {  
             intv                        = keypoints[i].intv + keypoints[i].offset_intv;
-            keypoints[i].sigma          = sigma * pow(2.0, keypoints[i].octv + intv/intvs);
-            keypoints[i].octv_sigma     = sigma * pow(2.0, intv/intvs);
+            keypoints[i].scale          = sigma * pow(2.0, keypoints[i].octv + intv/intvs);
+            keypoints[i].octv_scale     = sigma * pow(2.0, intv/intvs);
         }
     }
 
@@ -363,7 +363,7 @@ namespace ds
         {  
             feats[i].dx /= 2;
             feats[i].dy /= 2;
-            feats[i].sigma /= 2;
+            feats[i].scale /= 2;
         }
     }
 
@@ -426,7 +426,7 @@ namespace ds
         hist.bins = bins;
         for(vector<KeyPoint>::iterator it = extrema.begin(); it != extrema.end(); ++it)
         {
-            create_ori_hist(gauss_pyr.imgs[it->octv*gauss_pyr.intvs + it->intv], it->y, it->x, round(SIFT_ORI_WINDOW_RADIUS*it->octv_sigma), SIFT_ORI_SIGMA_TIMES*it->octv_sigma, hist);
+            create_ori_hist(gauss_pyr.imgs[it->octv*gauss_pyr.intvs + it->intv], it->y, it->x, round(SIFT_ORI_WINDOW_RADIUS*it->octv_scale), SIFT_ORI_SIGMA_TIMES*it->octv_scale, hist);
             for(int i = 0; i < SIFT_ORI_SMOOTH_TIMES; ++i)
             {
                 gauss_smooth_hist(hist);
@@ -481,11 +481,11 @@ namespace ds
         double  bin, PI2 = PI*2.0, mag_thr = SIFT_ORI_PEAK_RATIO*hist.max_mag;
         int l = 0, r = 0;
         for(int i = 0; i < hist.bins; ++i)
-        {  
+        {
             l = (0 == i) ? hist.bins-1 : i-1;
             r = (hist.bins == i+1) ? 0 : i+1;
             if(hist.mag[i] > hist.mag[l] && hist.mag[i] > hist.mag[r] && hist.mag[i] >= mag_thr)
-            {  
+            {
                 bin = i + parabola_interp_offset(hist.mag[l], hist.mag[i], hist.mag[r]);
                 bin = (bin < 0) ? (bin + hist.bins) : (bin >= hist.bins ? (bin-hist.bins) : bin);
                 KeyPoint new_key;
@@ -518,8 +518,8 @@ namespace ds
         dst.offset_x = src.offset_x;
         dst.dy = src.dy;
         dst.dx = src.dx;
-        dst.sigma = src.sigma;
-        dst.octv_sigma = src.octv_sigma;
+        dst.scale = src.scale;
+        dst.octv_scale = src.octv_scale;
         dst.ori = src.ori;
         dst.val = src.val;
         // dst.descr_length = src.descr_length;
@@ -543,7 +543,7 @@ namespace ds
         double sigma = 0.5 * width;
         double PI2 = 2*PI;
         double exp_denom = -0.5/(sigma*sigma), A = 1.0/(PI2*sigma*sigma);
-        double sub_width = SIFT_DESCR_SCALE_ADJUST * feat.octv_sigma;
+        double sub_width = SIFT_DESCR_SCALE_ADJUST * feat.octv_scale;
         int radius = round(0.5*sqrt(2.0)*sub_width*(width+1));
         double grad_ori = 0.0, grad_mag = 0.0;
         for(int i = -radius; i <= radius; ++i)
@@ -668,7 +668,7 @@ namespace ds
         /* compute points for an arrow scaled and rotated by feat's scl and ori */  
         start_x = round( feat.dx );  
         start_y = round( feat.dy );  
-        scl = feat.sigma;  
+        scl = feat.scale;  
         ori = feat.ori;  
         len = round( scl * scale );  
         hlen = round( scl * hscale );  

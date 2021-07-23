@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-21 13:05:14
- * @LastEditTime: 2021-07-23 11:51:03
+ * @LastEditTime: 2021-07-23 15:59:13
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dssift\dssift.h
@@ -42,9 +42,9 @@ namespace ds
     {  
         int    octv, intv, y, x;                // location of keypoint
         double offset_intv, offset_y, offset_x; // offset to extremum
-        double sigma;                           // global sigma
+        double scale;                           // global sigma
         double dy, dx;                          // coordinate of keypoint in original image
-        double octv_sigma;                      // sigma inside the octave, for the same intv image of different octv, their octv_sigma is equal.
+        double octv_scale;                      // sigma inside the octave, for the same intv image of different octv, their octv_scale is equal.
         double ori;                             // orientation of keypoint
         int    descr_length;                    // length of descriptor
         double descriptor[SIFT_FEAT_LEN];       // descriptor for the feature
