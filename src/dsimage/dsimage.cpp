@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:59
- * @LastEditTime: 2021-07-23 01:30:01
+ * @LastEditTime: 2021-07-23 11:27:31
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.cpp
@@ -180,7 +180,24 @@ namespace ds
      
     void Image::resize(I const int h, I const int w, I const int c)
     {
-        
+        Image sampleimg(h, w, 0==c?_c:c);
+        double r[3] = {double(sampleimg._h)/double(_h), double(sampleimg._w)/double(_w), double(sampleimg._c)/double(_c)};
+        double y_prime, x_prime, z_prime;
+        int y, x, z, i;
+        for(y = 0, i = 0; y < sampleimg._h; ++y)
+        {
+            y_prime = double(y) / r[0];
+            for(x = 0; x < sampleimg._w; ++x)
+            {
+                x_prime = double(x) / r[1];
+                for(z = 0; z < sampleimg._c; ++z)
+                {
+                    z_prime = double(z) / r[2];
+                    sampleimg._data[i++] = linear_interp_val(*this, y_prime, x_prime, z_prime);
+                }
+            }
+        }
+        *this = sampleimg;
     }
 
      
@@ -378,8 +395,8 @@ namespace ds
                 double b = bgr_img._data[i++];
                 double g = bgr_img._data[i++];
                 double r = bgr_img._data[i++];
-                gray_img._data[j++] =  r*0.299 +  g*0.587 +  b*0.114;
-                // gray_img._data[j++] =  (r + g + b)/3.0;
+                // gray_img._data[j++] =  r*0.299 +  g*0.587 +  b*0.114;
+                gray_img._data[j++] =  (r + g + b)/3.0;
             }
         }
         return 0;
@@ -611,7 +628,7 @@ namespace ds
         return val;
     }
 
-     
+
     Image sample_image(I Image& img, I const double rate[3])
     {
         Image sampleimg(int(img._h*rate[0]), int(img._w*rate[1]), int(img._c*rate[2]));
@@ -634,7 +651,7 @@ namespace ds
         return sampleimg;
     }
 
-     
+
     Image generate_gaussian_mat(I const int shape[3], I const double sigma, I const bool norm)
     {
         Image g_mat(shape[0], shape[1], shape[2]);

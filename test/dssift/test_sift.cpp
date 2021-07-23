@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-22 16:18:38
- * @LastEditTime: 2021-07-23 00:27:46
+ * @LastEditTime: 2021-07-23 11:10:42
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\test\dssift\test_sift.cpp
@@ -1472,7 +1472,7 @@ using namespace cv;
   
 int main(int argc, char **argv)  
 {
-    Image img_ori("E:/Coding/C++/bin/imgs/lenna.jpg", 1);
+    Image img_ori("E:/Coding/C++/bin/imgs/conan0.jpg", 1);
     cv::Mat src; img2cvmat(img_ori, src);
     // cv::Mat src = imread("E:/Coding/C++/bin/imgs/lenna.jpg", 1);
     if(src.empty())  
@@ -1489,7 +1489,7 @@ int main(int argc, char **argv)
   
     Sift(src, feats, 1.6);                           //【1】SIFT特征点检测和特征点描述  
     DrawKeyPoints(src, feats);                       //【2】画出关键点(特征点)  
-    DrawSiftFeatures(src, feats);                    //【3】画出SIFT特征点  
+    // DrawSiftFeatures(src, feats);                    //【3】画出SIFT特征点  
     // write_features(features, "descriptor.txt");         //【4】将特征点写入文本  
     mywatch.stop_clock();
     printf("time cost: %fs, frame rate: %f.\n", mywatch.get_duration(), 1 / mywatch.get_duration());

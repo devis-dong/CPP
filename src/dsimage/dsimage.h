@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-19 21:01:48
- * @LastEditTime: 2021-07-22 23:22:43
+ * @LastEditTime: 2021-07-23 11:26:05
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dsimage\dsimage.h
@@ -51,7 +51,7 @@ namespace ds
             // Image subimage(I const PixelPos& start, I const PixelPos& end);
             // Image subimage(I const PixelPos& start, I const PixelPos& len);
             Image subimage(I int const start[3], I const int len[3]);
-            void resize(I const int h, I const int w, I const int c);
+            void resize(I const int h, I const int w, I const int c=0);
             void reset(I const int h, I const int w, I const int c);
             void reset(I const int h, I const int w, I const int c, I const double val);
             double get_sum();

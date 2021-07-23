@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-21 13:08:48
- * @LastEditTime: 2021-07-23 01:45:46
+ * @LastEditTime: 2021-07-23 11:47:43
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\test\dssift\test_dssift.cpp
@@ -88,6 +88,7 @@ int main()
 
     /*=======================================================================================*/
     Image img0("E:/Coding/C++/bin/imgs/conan0.jpg", 1);
+    // img0.resize(128, 128);
     vector<KeyPoint> feats0;
     get_sift_features(img0, feats0);
     mywatch.stop_clock();
@@ -97,15 +98,15 @@ int main()
     draw_sift_features(img0, feats0);
     show_image(img0, "img0");
 
-    Image img1("E:/Coding/C++/bin/imgs/conan1.jpg", 1);
-    vector<KeyPoint> feats1;
-    get_sift_features(img1, feats1);
-    mywatch.stop_clock();
-    loginfo("img1 feats num: %d", feats1.size());
-    loginfo("img1 time cost: %fs, frame rate: %f.", mywatch.get_duration(), 1 / mywatch.get_duration());
-    draw_key_points(img1, feats1);
-    draw_sift_features(img1, feats1);
-    show_image(img1, "img1");
+    // Image img1("E:/Coding/C++/bin/imgs/conan1.jpg", 1);
+    // vector<KeyPoint> feats1;
+    // get_sift_features(img1, feats1);
+    // mywatch.stop_clock();
+    // loginfo("img1 feats num: %d", feats1.size());
+    // loginfo("img1 time cost: %fs, frame rate: %f.", mywatch.get_duration(), 1 / mywatch.get_duration());
+    // draw_key_points(img1, feats1);
+    // draw_sift_features(img1, feats1);
+    // show_image(img1, "img1");
 
     wait_key();
     close_all();

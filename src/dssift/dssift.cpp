@@ -1,7 +1,7 @@
 /*** 
  * @Author: devis dong
  * @Date: 2021-07-21 13:05:23
- * @LastEditTime: 2021-07-23 01:38:59
+ * @LastEditTime: 2021-07-23 11:49:05
  * @LastEditors: devis dong
  * @Description: 
  * @FilePath: \C++\src\dssift\dssift.cpp
@@ -52,7 +52,7 @@ namespace ds
         mywatch.stop_clock();
         loginfo("step 3 time cost: %fs.", mywatch.get_duration());
 
-        loginfo("step 4: intially generate keypoints and assign oritentation for each of them.");
+        loginfo("step 4: intially generate keypoints.");
         mywatch.start_clock();
         assign_orient(gauss_pyr, extrema, ori_hist_bins, feats);
         mywatch.stop_clock();
@@ -253,10 +253,10 @@ namespace ds
                 }
             }
         }
-        cout<<"after thresh: "<<cnt0<<endl;
-        cout<<"after is_extremum: "<<cnt1<<endl;
-        cout<<"after interplate_extremum: "<<cnt2<<endl;
-        cout<<"after like_edge_toomuch: "<<cnt3<<endl;
+        logdebug("after thresh: %d", cnt0);
+        logdebug("after is_extremum: %d", cnt1);
+        logdebug("after interplate_extremum: %d", cnt2);
+        logdebug("after like_edge_toomuch: %d", cnt3);
     }
 
 
@@ -541,8 +541,8 @@ namespace ds
         double cos_ori = cos(feat.ori);
         double sin_ori = sin(feat.ori);
         double sigma = 0.5 * width;
-        double exp_denom = -1.0/(2*sigma*sigma);
         double PI2 = 2*PI;
+        double exp_denom = -0.5/(sigma*sigma), A = 1.0/(PI2*sigma*sigma);
         double sub_width = SIFT_DESCR_SCALE_ADJUST * feat.octv_sigma;
         int radius = round(0.5*sqrt(2.0)*sub_width*(width+1));
         double grad_ori = 0.0, grad_mag = 0.0;
@@ -563,7 +563,7 @@ namespace ds
                         if(grad_ori < 0.0) grad_ori += PI2;
                         if(grad_ori >= PI2) grad_ori -= PI2;
                         double zbin = bins * grad_ori / PI2;
-                        double weight = exp(exp_denom*(rot_x*rot_x + rot_y * rot_y));
+                        double weight = A * exp(exp_denom*(rot_x*rot_x + rot_y*rot_y));
                         interp_hist_entry(feat, ybin, xbin, zbin, grad_mag*weight, bins, width);
                     }
                 }
